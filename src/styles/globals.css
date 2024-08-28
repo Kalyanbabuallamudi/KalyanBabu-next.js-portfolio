@@ -1,0 +1,710 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/******************** STARTED GLOBAL STYLES ********************/
+
+/* Apply new impressive background globally */
+body {
+  @apply font-sans text-gray-800 min-h-screen flex flex-col;
+  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%); /* Cool Gradient Background */
+  background-size: cover; /* Ensure the background covers the entire screen */
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Allow scrolling */
+}
+
+/* Ensure the main content stretches and the footer stays at the bottom */
+main {
+  @apply flex-grow;
+  padding: 5px 0; /* Adjust padding as needed */
+}
+
+/* Link and Container Styles */
+a {
+  @apply text-indigo-600 hover:text-indigo-800;
+}
+
+/* Section, Heading, and Button Styles */
+section {
+  @apply py-10;
+}
+
+h1, h2, h3 {
+  @apply font-bold text-gray-900;
+}
+
+button {
+  @apply bg-indigo-600 text-white py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+  display: block; /* Ensure the button is a block element */
+  margin: 0 auto; /* Center the button */
+}
+
+/* Form and Card Styles */
+input, textarea, select {
+  @apply border border-gray-300 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+.card {
+  @apply bg-white shadow-lg rounded-lg p-6 mb-16;
+}
+
+/* Footer Styles */
+footer {
+  @apply bg-white text-gray-800 py-4 text-center w-full;
+  margin-top: auto; /* Push the footer to the bottom */
+  padding: 2px 0; /* Adjust padding as needed */
+  border-top: 1px solid #e0e0e0; /* Optional: add a top border to separate from content */
+}
+
+footer p {
+  @apply text-gray-600; /* Style for the text inside the footer */
+}
+
+/******************** ENDED GLOBAL STYLES ********************/
+
+
+/******************** STARTED PROJECTS PAGE STYLES ********************/
+
+/* globals.css */
+
+/* Container styles */
+#projects {
+  padding: 2rem;
+   
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header styles */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+h1:hover {
+  color: #0070f3; /* Change color on hover */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+p {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease; /* Added transition for color change */
+}
+
+p:hover {
+  color: #444; /* Darker color on hover */
+}
+
+/* Grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem; /* Added margin for better spacing */
+}
+
+/* Card styles */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem; /* Increased padding for better content spacing */
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background color transition */
+  overflow: hidden; /* Ensures hover effects stay within bounds */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+  background-color: #f9f9f9; /* Subtle background color change */
+}
+
+/* Title and description styles */
+.card h2 {
+  font-size: 1.6rem; /* Slightly larger font size */
+  color: #333;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease; /* Added transition for color change */
+}
+
+.card h2:hover {
+  color: #0070f3; /* Change color on hover */
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease; /* Added transition for color change */
+}
+
+.card p:hover {
+  color: #444; /* Darker color on hover */
+}
+
+/* Technologies section styles */
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Technology image styles */
+.technologyImage {
+  border-radius: 6px;
+  background: #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technologyImage:hover {
+  transform: scale(1.1); /* Enlarge the tech icons on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* GitHub link styles */
+.githubLink {
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Added filter transition */
+}
+
+.githubLink:hover {
+  transform: scale(1.2); /* Enlarge the GitHub icon on hover */
+}
+
+.githubLink img {
+  vertical-align: middle;
+  transition: filter 0.3s ease, transform 0.3s ease; /* Added transition for filter and transform */
+}
+
+.githubLink img:hover {
+  filter: brightness(1.2); /* Lighten the icon on hover */
+  transform: rotate(360deg); /* Rotate the icon on hover */
+}
+
+/******************** ENDED PROJECTS PAGE STYLES ********************/
+
+
+
+
+
+
+/*********** Project Headings **********************/
+/* Projects Section */
+
+#projects h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2rem;
+  
+}
+
+#projects p {
+  font-size: 1.5rem;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/*********** Project Headings **********************/
+
+
+
+
+/******************** STARTED INTERNSHIPS PAGE STYLES ********************/
+/* Internships Section */
+
+#internships {
+  padding: 4rem 1.5rem;
+}
+
+#internships .max-w-4xl {
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#internships h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827; /* Dark color for heading */
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#internships h1:hover {
+  color: #2563eb; /* Blue color on hover */
+  transform: scale(1.05);
+}
+
+#internships p {
+  font-size: 1.125rem;
+  color: #6b7280; /* Gray color for description */
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
+}
+
+#internships p:hover {
+  color: #4b5563; /* Darker gray on hover */
+}
+
+#internships .grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+#internships .relative {
+  position: relative;
+  border-radius: 0.5rem;
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#internships .relative:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+#internships .text-xl {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827; /* Dark color for role */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#internships .text-xl:hover {
+  color: #2563eb; /* Blue color on hover */
+  transform: scale(1.02);
+}
+
+#internships .text-gray-500 {
+  color: #6b7280; /* Gray color for company */
+}
+
+#internships .text-blue-500 {
+  color: #2563eb; /* Blue color for links */
+  font-weight: 600;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+#internships .text-blue-500:hover {
+  color: #1d4ed8; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/*****************Internship Ended****************/
+
+/******************************Internship Heading***********************/
+#internships h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2rem;
+  
+}
+
+#internships p {
+  font-size: 1.5rem;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+/******************************Internship Heading***********************/
+
+
+/******************** ENDED INTERNSHIPS PAGE STYLES ********************/
+/***************************** Start Skills heading ******************************************/
+#skills h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2rem;
+  
+}
+
+#skills p {
+  font-size: 1.5rem;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/*************Education Heading***************/
+#education h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2rem;
+}
+
+#education p {
+  font-size: 1.5rem;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+/***************Education Heading********/
+
+/*****************Email Heading*********/
+
+#contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+#contact h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2rem;
+}
+
+.contact-container p {
+  font-size: 1.5rem;
+  color: #0a24ea; /* Your chosen color */
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.contact-container a {
+  color: #0a24ea; /* Your chosen color */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-container a:hover {
+  text-decoration: underline;
+}
+
+
+
+/**************Email Heading**************/
+/******************************  About Me **********************************************/
+
+
+
+/***************************** Started Three Background **********/
+/* Ensure the ThreeBackground component covers the entire viewport */
+.threeBackground {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10; /* Ensure it stays behind other content */
+}
+
+/***************************** Ended Three Background **********/
+
+
+/**************** Started Live Texts ************************************/
+/* styles/globals.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.live-text {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: 900; /* Apply bold weight */
+  background: linear-gradient(45deg, #ea0a64, #ea0a64, #ea0a64, #ea0a64); /* Cool Gradient Colors */
+  -webkit-background-clip: text; /* Clipping background to text */
+  -webkit-text-fill-color: transparent; /* Makes text color transparent to show gradient */
+  background-size: 300% 300%; /* Extended gradient background for more movement */
+  animation: gradientAnimation 10s ease infinite, pulseAnimation 1.5s ease-in-out infinite; /* Enhanced animations */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color change */
+}
+
+.live-text:hover {
+  transform: scale(1.1); /* Slightly more scale up on hover */
+  color: #ea0a64; /* Change text color on hover */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/********************* Nav Bar **************************/
+/********************* Nav Bar **************************/
+/* globals.css */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%); /* Cool Gradient Background */
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  padding: 0; /* No extra space */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center; /* Center vertically */
+  height: 60px; /* Adjust based on your design */
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Size of the hamburger button */
+  height: 30px; /* Size of the hamburger button */
+  position: absolute;
+  left: 1rem; /* Space from the left edge */
+}
+
+button div {
+  width: 30px; /* Width of the bars */
+  height: 3px; /* Height of the bars */
+  background-color: white;
+  margin: 4px 0; /* Space between bars */
+  transition: all 0.3s ease;
+}
+
+/* Rotate bars to form 'X' when menu is open */
+button.open div:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+button.open div:nth-child(2) {
+  opacity: 0;
+}
+
+button.open div:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+}
+
+/* Dropdown menu */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px; /* Adjust based on navbar height */
+  left: 0;
+  right: 0;
+  background-color: #ffffff; /* White background for dropdown */
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for dropdown */
+  border-radius: 8px; /* Rounded corners for dropdown */
+  width: 200px; /* Fixed width for dropdown */
+}
+
+.menu-dropdown.open {
+  display: block;
+}
+
+.menu-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-dropdown li {
+  margin: 10px 0;
+}
+
+.menu-dropdown a {
+  color: #39d609; /* Dark text color for better contrast on white */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.menu-dropdown a:hover {
+  color: #00C9FF; /* Light blue color on hover */
+}
+
+/********************* Nav Bar **************************/
+/**************** Skills Styles ***********************/
+/* src/styles/globals.css */
+
+/* Skills Section Styles */
+
+#skills {
+  padding: 3rem 1.5rem; /* Adjust padding for better spacing */
+  
+}
+
+
+#skills h1:hover {
+  transform: scale(1.05); /* Scaling effect on hover */
+}
+
+#skills p {
+  font-size: 1.125rem;
+  color: #4b5563; /* Gray color for description */
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+#skills .grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+#skills .relative {
+  position: relative;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+#skills .relative:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Scaling effect on hover */
+  background-color: #f9fafb; /* Light gray background on hover */
+}
+
+#skills .relative img {
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+#skills .relative img:hover {
+  transform: scale(1.1); /* Scaling effect on hover */
+}
+
+#skills h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827; /* Dark color for skill name */
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+#skills h2:hover {
+  color: #3b82f6; /* Blue color on hover */
+}
+
+/****************** Ended Skills **********************/
+
+
+
+/*******************Started Education**************************/
+/* src/styles/globals.css */
+
+/* Education Section */
+
+#education {
+  padding: 4rem 1.5rem; /* Increased padding for better spacing */
+  
+}
+
+
+#education .space-y-6 > * + * {
+  margin-top: 1.5rem; /* Space between items */
+}
+
+#education .shadow-lg {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border-radius: 0.75rem; /* Rounded corners */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+  background-color: #ffffff; /* White background for cards */
+}
+
+#education .shadow-lg:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+#education .flex {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+#education .flex .mr-4 {
+  margin-right: 1.5rem; /* More spacing for the logo */
+}
+
+#education img {
+  border-radius: 0.5rem; /* Rounded corners for logos */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+#education img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+#education h3 {
+  font-size: 1.5rem; /* Font size for degree */
+  font-weight: 700; /* Medium-bold font weight */
+  color: #4f46e5; /* Indigo color for degree */
+  margin-bottom: 0.5rem; /* Bottom margin */
+}
+
+#education p {
+  font-size: 1rem; /* Font size for paragraphs */
+  color: #4b5563; /* Dark gray color for text */
+  line-height: 1.6; /* Improved readability */
+}
+
+#education p.mb-1 {
+  margin-bottom: 0.25rem; /* Adjusted margin for institution */
+}
+
+#education p.mb-2 {
+  margin-bottom: 0.5rem; /* Adjusted margin for duration */
+}
+
+#education p:last-of-type {
+  color: #6b7280; /* Lighter gray for description */
+}
+
+
+/*******************Ended Education**************************/
