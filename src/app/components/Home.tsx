@@ -120,7 +120,7 @@ const HomeSection = () => {
           </motion.p>
           <div className="flex space-x-4 mt-4">
             <motion.a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/Kalyanbabuallamudi" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-900 transition duration-300 hover:text-gray-600"
@@ -129,7 +129,7 @@ const HomeSection = () => {
               <FaGithub size={24} />
             </motion.a>
             <motion.a 
-              href="https://linkedin.com/in/yourusername" 
+              href="https://www.linkedin.com/in/kalyan-babu-a4b574199" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-900 transition duration-300 hover:text-gray-600"
@@ -138,7 +138,7 @@ const HomeSection = () => {
               <FaLinkedin size={24} />
             </motion.a>
             <motion.a 
-              href="https://instagram.com/yourusername" 
+              href="https://www.instagram.com/kalyanbabu__?igsh=MXNuaGV6bG84Z2N2OQ=="
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-900 transition duration-300 hover:text-gray-600"
@@ -147,7 +147,7 @@ const HomeSection = () => {
               <FaInstagram size={24} />
             </motion.a>
             <motion.a 
-              href="https://facebook.com/yourusername" 
+              href="https://www.facebook.com/profile.php?id=61557758402598&mibextid=ZbWKwL" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-900 transition duration-300 hover:text-gray-600"
