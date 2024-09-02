@@ -1,8 +1,3 @@
-To update your `README.md` file to reference the correct `LICENSE.md` file, you can make the following adjustments:
-
-### Updated `README.md`
-
-```markdown
 # Kalyan Babu's Portfolio
 
 Welcome to my Next.js one-page portfolio! 🎨 This project showcases my skills, projects, and experiences in a modern, interactive layout. Follow the steps below to set up and run the project on your local machine.
