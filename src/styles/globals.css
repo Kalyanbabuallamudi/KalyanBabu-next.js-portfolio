@@ -709,3 +709,10 @@ button.open div:nth-child(3) {
 
 
 /*******************Ended Education**************************/
+
+/* src/styles/globals.css or styles/globals.css */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
