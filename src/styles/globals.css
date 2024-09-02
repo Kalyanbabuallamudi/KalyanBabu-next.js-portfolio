@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 /******************** STARTED GLOBAL STYLES ********************/
 
@@ -426,7 +427,6 @@ p:hover {
 /* styles/globals.css */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 .live-text {
   font-family: 'Roboto', sans-serif; /* Use Roboto font */
@@ -575,9 +575,7 @@ button.open div:nth-child(3) {
 
 #skills {
   padding: 3rem 1.5rem; /* Adjust padding for better spacing */
-  
 }
-
 
 #skills h1:hover {
   transform: scale(1.05); /* Scaling effect on hover */
@@ -614,6 +612,8 @@ button.open div:nth-child(3) {
 #skills .relative img {
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
+  width: auto; /* Ensure width is auto to maintain aspect ratio */
+  height: auto; /* Ensure height is auto to maintain aspect ratio */
 }
 
 #skills .relative img:hover {
@@ -633,6 +633,7 @@ button.open div:nth-child(3) {
 }
 
 /****************** Ended Skills **********************/
+
 
 
 
