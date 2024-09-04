@@ -28,6 +28,12 @@ export const projects = [
 /****************** Start Internship  JS ******************/
   export const internships = [
     {
+      company: 'Google, California, USA',
+      role: 'Google AI-ML Intern',
+      certificate: '/aiml.jpg', // Replace with the actual path to your certificate image
+    },
+    
+    {
       company: 'Amazon, Washington, USA',
       role: 'AWS Intern',
       certificate: '/certificate-company-a.jpg', // Replace with the actual path to your certificate image
@@ -97,16 +103,22 @@ export const skills = [
 
 /************************ About  *************/
 
-// scripts.js
 
-// Function to handle any additional dynamic behavior in About component
-export const initializeAboutSection = () => {
-  // Example: Add some interactive effects or logic here
-  console.log('About section initialized');
+/*********************** CERTIFICATIONS ******************/
+export const certifications = [
+  {
+    title: "Certified Google Data Analytics",
+    issuer: "Google",
+    image: "/Google Data Analytics - Kalyan Babu Allamudi.jpg",
+    link: "https://coursera.org/share/b4faa95b4baa6cd70eee59cd11caee65"
+  },
+  {
+    title: "Certified Azure AI Fundamentals",
+    issuer: "Microsoft",
+    image: "/Azure.jpg",
+    link: "https://learn.microsoft.com/api/credentials/share/en-gb/KalyanBabuAllamudi-0815/3886D0A0ED197450?sharingId=6E1D31C8E341421"
+  }
+];
 
-  // Example: You can use this function to add event listeners or other dynamic behaviors
-  // document.querySelector('.about-me-section')?.addEventListener('click', () => {
-  //   alert('About section clicked');
-  // });
-};
+/*********************** CERTIFICATIONS ******************/
 

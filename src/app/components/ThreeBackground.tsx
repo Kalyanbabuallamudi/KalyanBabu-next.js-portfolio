@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
@@ -17,8 +18,8 @@ const ThreeBackground = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#00C9FF;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#92FE9D;stop-opacity:1" />
+              <stop offset="0%" style="stop-color:#ffea00;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#00ff00;stop-opacity:1" />
             </linearGradient>
           </defs>
           <rect width="100%" height="100%" fill="url(#grad1)" />
@@ -38,6 +39,7 @@ const ThreeBackground = () => {
     // Set up the renderer
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
     mount.appendChild(renderer.domElement);
 
     // Create the particle system
@@ -71,13 +73,23 @@ const ThreeBackground = () => {
 
     animate();
 
+    // Handle window resizing
+    const handleResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
     // Clean up on unmount
     return () => {
+      window.removeEventListener('resize', handleResize);
       mount.removeChild(renderer.domElement);
     };
   }, []);
 
-  return <div ref={mountRef} className="threeBackground" />;
+  return <div ref={mountRef} className="threeBackground" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />;
 };
 
 export default ThreeBackground;

@@ -8,7 +8,7 @@
 /* Apply new impressive background globally */
 body {
   @apply font-sans text-gray-800 min-h-screen flex flex-col;
-  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%); /* Cool Gradient Background */
+  background: linear-gradient(135deg, #ffea00 0%, #00ff00 100%); /* Yellow to Green Gradient Background */
   background-size: cover; /* Ensure the background covers the entire screen */
   margin: 0;
   padding: 0;
@@ -50,24 +50,13 @@ input, textarea, select {
   @apply bg-white shadow-lg rounded-lg p-6 mb-16;
 }
 
-/* Footer Styles */
-footer {
-  @apply bg-white text-gray-800 py-4 text-center w-full;
-  margin-top: auto; /* Push the footer to the bottom */
-  padding: 2px 0; /* Adjust padding as needed */
-  border-top: 1px solid #e0e0e0; /* Optional: add a top border to separate from content */
-}
-
-footer p {
-  @apply text-gray-600; /* Style for the text inside the footer */
-}
-
 /******************** ENDED GLOBAL STYLES ********************/
+
 
 
 /******************** STARTED PROJECTS PAGE STYLES ********************/
 
-/* globals.css */
+
 
 /* Container styles */
 #projects {
@@ -407,24 +396,69 @@ p:hover {
 /**************Email Heading**************/
 /******************************  About Me **********************************************/
 
+/***************************** Three.js Background Styles **********/
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+  height: 100%; /* Fix height to 100% */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Inter', sans-serif;
+}
 
-/***************************** Started Three Background **********/
-/* Ensure the ThreeBackground component covers the entire viewport */
+/* Container for the Three.js background */
 .threeBackground {
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  z-index: -10; /* Ensure it stays behind other content */
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind all other content */
+  pointer-events: none; /* Prevent interaction with the background */
 }
 
-/***************************** Ended Three Background **********/
+/* Main content area */
+main {
+  position: relative;
+  z-index: 10; /* Place main content above the background */
+  min-height: 100vh;
+  padding: 0; /* No padding */
+  margin-top: 0; /* No margin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer styling if used */
+footer {
+  position: relative;
+  z-index: 10; /* Ensure the footer is above the background */
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  text-align: center;
+}
+
+/* Allow scrolling on the body while keeping the background fixed */
+body {
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/***************************** Ended Three.js Background Styles **********/
+
+
+
+
 
 
 /**************** Started Live Texts ************************************/
-/* styles/globals.css */
+
 
 /* Import Google Fonts */
 
@@ -463,113 +497,8 @@ p:hover {
   }
 }
 
-
-
-
-
-
-
-
-
-/********************* Nav Bar **************************/
-/********************* Nav Bar **************************/
-/* globals.css */
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%); /* Cool Gradient Background */
-  z-index: 1000; /* Ensures it stays on top of other elements */
-  padding: 0; /* No extra space */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  display: flex;
-  align-items: center; /* Center vertically */
-  height: 60px; /* Adjust based on your design */
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40px; /* Size of the hamburger button */
-  height: 30px; /* Size of the hamburger button */
-  position: absolute;
-  left: 1rem; /* Space from the left edge */
-}
-
-button div {
-  width: 30px; /* Width of the bars */
-  height: 3px; /* Height of the bars */
-  background-color: white;
-  margin: 4px 0; /* Space between bars */
-  transition: all 0.3s ease;
-}
-
-/* Rotate bars to form 'X' when menu is open */
-button.open div:nth-child(1) {
-  transform: rotate(45deg);
-  position: absolute;
-}
-
-button.open div:nth-child(2) {
-  opacity: 0;
-}
-
-button.open div:nth-child(3) {
-  transform: rotate(-45deg);
-  position: absolute;
-}
-
-/* Dropdown menu */
-.menu-dropdown {
-  display: none;
-  position: absolute;
-  top: 60px; /* Adjust based on navbar height */
-  left: 0;
-  right: 0;
-  background-color: #ffffff; /* White background for dropdown */
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for dropdown */
-  border-radius: 8px; /* Rounded corners for dropdown */
-  width: 200px; /* Fixed width for dropdown */
-}
-
-.menu-dropdown.open {
-  display: block;
-}
-
-.menu-dropdown ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-dropdown li {
-  margin: 10px 0;
-}
-
-.menu-dropdown a {
-  color: #39d609; /* Dark text color for better contrast on white */
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.menu-dropdown a:hover {
-  color: #00C9FF; /* Light blue color on hover */
-}
-
-/********************* Nav Bar **************************/
 /**************** Skills Styles ***********************/
-/* src/styles/globals.css */
+
 
 /* Skills Section Styles */
 
@@ -716,3 +645,31 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/**************** CERTIFICATIONS ****************************/
+
+/**************** CERTIFICATIONS ****************************/
+
+/**************** Footer *******************************/
+/* src/styles/globals.css */
+
+.footer {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  padding: 20px;
+  background-color: #eff303;
+  color: #333333;
+}
+
+.footer-heading {
+  margin: 0; /* Removes default margin */
+}
+
+
+
+
+/**************** Footer *******************************/
+
+@import "./navbar.css";

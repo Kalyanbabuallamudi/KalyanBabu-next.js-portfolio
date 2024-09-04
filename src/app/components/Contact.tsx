@@ -11,9 +11,9 @@ const Contact = () => {
         <p>
           If you have any queries, let me know, mail me at{' '}
           <a
-            href="mailto:allamudikalyanbabu56@gmail.com"
+            href="mailto:kalyanbabu.portfolio@gmail.com"
           >
-            allamudikalyanbabu56@gmail.com
+            kalyanbabu.portfolio@gmail.com
           </a>
         </p>
       </div>
