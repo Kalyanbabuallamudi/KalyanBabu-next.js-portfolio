@@ -12,7 +12,7 @@ const ThreeBackground = () => {
     // Create the scene
     const scene = new THREE.Scene();
 
-    // Set the background to a cool gradient
+    // Set the background to a gradient
     const gradientTexture = new THREE.TextureLoader().load('data:image/svg+xml;base64,' + 
       btoa(`
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
@@ -37,7 +37,7 @@ const ThreeBackground = () => {
     camera.position.z = 5;
 
     // Set up the renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     mount.appendChild(renderer.domElement);
@@ -57,7 +57,7 @@ const ThreeBackground = () => {
     );
 
     const particlesMaterial = new THREE.PointsMaterial({
-      color: '#ffffff', // Color of the particles
+      color: '#ffffff',
       size: 0.005,
     });
 
@@ -89,7 +89,7 @@ const ThreeBackground = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className="threeBackground" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />;
+  return <div ref={mountRef} className="threeBackground" />;
 };
 
 export default ThreeBackground;

@@ -9,11 +9,10 @@ const texts = [
   'Hello, I\'m Kalyan Babu', 
   'A Fullstack Developer',
   'An AI Enthusiast',
-  'Open Source Contributor',
 ];
 
 const aboutMeSentences = [
-  "I'm a web developer focused on Next.js and React.",
+  
   "I create engaging and user-friendly web apps.",
   "I’m passionate about delivering innovative solutions.",
   "I enjoy exploring new technologies and contributing to open-source.",

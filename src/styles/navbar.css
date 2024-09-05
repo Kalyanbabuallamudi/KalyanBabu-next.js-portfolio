@@ -38,7 +38,7 @@ button div {
   top: 3rem; /* Align below the navbar */
   left: 0;
   right: 0;
-  background-color: #ffffff; /* Background color of the dropdown */
+  background-color: #1606f1; /* Background color of the dropdown */
   padding: 1rem; /* Padding for content inside the dropdown */
   text-align: center;
   z-index: 1000; /* Ensure it stays above all content */

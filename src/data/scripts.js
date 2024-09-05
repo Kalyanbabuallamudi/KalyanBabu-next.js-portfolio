@@ -5,6 +5,7 @@ export const projects = [
     technologies: ['/python.png', '/nltk.png', '/flask.png', '/tensorflow.png', '/googlecloudt2s.png', '/mongodb.png'],
     githubLink: 'https://github.com/Kalyanbabuallamudi/AI-Chatbot-',
     className: 'project-ai-chatbot',
+    videoUrl: '/chatbot_demo.mp4', // Add the video URL here
   },
   {
     title: 'Gemini BQ Functions',
@@ -12,6 +13,7 @@ export const projects = [
     technologies: ['/gemini.png', '/cloud.png', '/query.png'],
     githubLink: 'https://github.com/Kalyanbabuallamudi/Gemini-BQ-Function',
     className: 'project-gemini-bq',
+    videoUrl: '/', // Add the video URL here
   },
   {
     title: 'Python Based CHATGPT',
@@ -19,6 +21,7 @@ export const projects = [
     technologies: ['/python.png', '/OpenAI.png', '/API.png'],
     githubLink: 'https://github.com/Kalyanbabuallamudi/OpenAIChatbot-using-Python',
     className: 'project-chatgpt',
+    videoUrl: '/', // Add the video URL here
   },
 ];
 

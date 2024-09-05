@@ -1,5 +1,7 @@
 'use client';
 import '../../styles/globals.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Resume: React.FC = () => {
   return (
@@ -12,9 +14,10 @@ const Resume: React.FC = () => {
         <a
           href="/resume.pdf"
           download="Resume.pdf"  // This attribute triggers the download
-          className="text-white bg-blue-500 hover:bg-blue-600 font-semibold py-2 px-4 rounded"
+          className="text-white bg-blue-500 hover:bg-blue-600 font-semibold py-2 px-4 rounded flex items-center justify-center gap-2"
         >
-          Download Resume Here
+          <FontAwesomeIcon icon={faDownload} /> {/* Download icon */}
+          Click to download my Resume
         </a>
       </div>
     </section>

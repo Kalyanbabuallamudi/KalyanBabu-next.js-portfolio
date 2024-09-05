@@ -14,12 +14,14 @@ body {
   margin: 0;
   padding: 0;
   overflow: auto; /* Allow scrolling */
+  min-height: 100vh; /* Ensure the body takes at least full viewport height */
 }
 
 /* Ensure the main content stretches and the footer stays at the bottom */
 main {
   @apply flex-grow;
   padding: 5px 0; /* Adjust padding as needed */
+  width: 100%; /* Ensure the main content takes full width */
 }
 
 /* Link and Container Styles */
@@ -53,16 +55,12 @@ input, textarea, select {
 
 /******************** ENDED GLOBAL STYLES ********************/
 
-
-
 /******************** STARTED PROJECTS PAGE STYLES ********************/
-
-
 
 /* Container styles */
 #projects {
-  padding: 2rem;
-   
+  padding: 4rem 2rem;
+  
 }
 
 .container {
@@ -73,79 +71,69 @@ input, textarea, select {
 
 /* Header styles */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #333;
   text-align: center;
-  margin-bottom: 1rem;
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 h1:hover {
-  color: #0070f3; /* Change color on hover */
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  color: #0070f3;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #666;
   text-align: center;
-  margin-bottom: 2rem;
-  transition: color 0.3s ease; /* Added transition for color change */
-}
-
-p:hover {
-  color: #444; /* Darker color on hover */
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
 /* Grid styles */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem; /* Added margin for better spacing */
+  gap: 2rem;
 }
 
 /* Card styles */
 .card {
-  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem; /* Increased padding for better content spacing */
+  padding: 2rem;
   text-align: center;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background color transition */
-  overflow: hidden; /* Ensures hover effects stay within bounds */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
-/* Card hover effect */
 .card:hover {
-  transform: translateY(-10px); /* Lift the card on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More shadow on hover */
-  background-color: #f9f9f9; /* Subtle background color change */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f1f1f1;
 }
 
 /* Title and description styles */
 .card h2 {
-  font-size: 1.6rem; /* Slightly larger font size */
+  font-size: 1.8rem;
   color: #333;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease; /* Added transition for color change */
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .card h2:hover {
-  color: #0070f3; /* Change color on hover */
+  color: #0070f3;
 }
 
 .card p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #666;
-  margin-bottom: 1rem;
-  transition: color 0.3s ease; /* Added transition for color change */
-}
-
-.card p:hover {
-  color: #444; /* Darker color on hover */
+  margin-bottom: 1.5rem;
 }
 
 /* Technologies section styles */
@@ -153,47 +141,96 @@ p:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Technology image styles */
 .technologyImage {
   border-radius: 6px;
-  background: #f0f0f0;
+  background: #e0e0e0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 60px;
+  height: 60px;
 }
 
 .technologyImage:hover {
-  transform: scale(1.1); /* Enlarge the tech icons on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* GitHub link styles */
 .githubLink {
-  display: flex; /* Use flexbox to center content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  margin-top: 1rem;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Added filter transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
 }
 
-.githubLink:hover {
-  transform: scale(1.2); /* Enlarge the GitHub icon on hover */
+.githubLink a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.githubLink a:hover {
+  transform: scale(1.2);
 }
 
 .githubLink img {
-  vertical-align: middle;
-  transition: filter 0.3s ease, transform 0.3s ease; /* Added transition for filter and transform */
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .githubLink img:hover {
-  filter: brightness(1.2); /* Lighten the icon on hover */
-  transform: rotate(360deg); /* Rotate the icon on hover */
+  filter: brightness(1.2);
+  transform: rotate(360deg);
+}
+
+/* Video Wrapper styles */
+.videoWrapper {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  border: 2px solid #0070f3;
+  border-radius: 8px;
+  background: #e0e0e0;
+  cursor: pointer;
+  color: #0070f3;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.videoWrapper:hover {
+  background: #0070f3;
+  
+}
+
+/* Video Overlay styles */
+.videoOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 199, 231, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.videoPlayer {
+  max-width: 90%;
+  max-height: 90%;
+  background: hsl(73, 91%, 48%);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(6, 202, 202, 0.2);
 }
 
 /******************** ENDED PROJECTS PAGE STYLES ********************/
-
-
 
 
 
@@ -394,62 +431,25 @@ p:hover {
 
 
 /**************Email Heading**************/
-/******************************  About Me **********************************************/
-/***************************** Three.js Background Styles **********/
-/* Reset default margins and paddings */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Ensure the body takes up the full height of the viewport */
-html, body {
-  height: 100%; /* Fix height to 100% */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  font-family: 'Inter', sans-serif;
-}
+/***************************** Three.js Background Styles **********/
 
 /* Container for the Three.js background */
 .threeBackground {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* Use viewport units to cover the entire screen */
+  height: 100vh; /* Use viewport units to cover the entire screen */
   z-index: -1; /* Ensure it stays behind all other content */
   pointer-events: none; /* Prevent interaction with the background */
 }
 
-/* Main content area */
-main {
-  position: relative;
-  z-index: 10; /* Place main content above the background */
-  min-height: 100vh;
-  padding: 0; /* No padding */
-  margin-top: 0; /* No margin */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Footer styling if used */
-footer {
-  position: relative;
-  z-index: 10; /* Ensure the footer is above the background */
-  width: 100%;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
-  text-align: center;
-}
-
-/* Allow scrolling on the body while keeping the background fixed */
-body {
-  overflow-y: auto; /* Allow vertical scrolling */
-  overflow-x: auto; /* Prevent horizontal scrolling */
-}
-
 /***************************** Ended Three.js Background Styles **********/
+
+
+
+
 
 /**************** Started Live Texts ************************************/
 
