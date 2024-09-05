@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import "./navbar.css";
 
 /******************** STARTED GLOBAL STYLES ********************/
 
@@ -392,10 +393,8 @@ p:hover {
 }
 
 
-
 /**************Email Heading**************/
 /******************************  About Me **********************************************/
-
 /***************************** Three.js Background Styles **********/
 /* Reset default margins and paddings */
 * {
@@ -447,18 +446,12 @@ footer {
 /* Allow scrolling on the body while keeping the background fixed */
 body {
   overflow-y: auto; /* Allow vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: auto; /* Prevent horizontal scrolling */
 }
 
 /***************************** Ended Three.js Background Styles **********/
 
-
-
-
-
-
 /**************** Started Live Texts ************************************/
-
 
 /* Import Google Fonts */
 
@@ -498,9 +491,6 @@ body {
 }
 
 /**************** Skills Styles ***********************/
-
-
-/* Skills Section Styles */
 
 #skills {
   padding: 3rem 1.5rem; /* Adjust padding for better spacing */
@@ -562,9 +552,6 @@ body {
 }
 
 /****************** Ended Skills **********************/
-
-
-
 
 /*******************Started Education**************************/
 /* src/styles/globals.css */
@@ -636,7 +623,6 @@ body {
   color: #6b7280; /* Lighter gray for description */
 }
 
-
 /*******************Ended Education**************************/
 
 /* src/styles/globals.css or styles/globals.css */
@@ -659,17 +645,15 @@ body {
   align-items: center; /* Centers items vertically */
   justify-content: center; /* Centers items horizontally */
   padding: 20px;
+  width:auto;
   background-color: #eff303;
-  color: #333333;
+  color: #17ed0f;
 }
 
 .footer-heading {
   margin: 0; /* Removes default margin */
 }
 
-
-
-
 /**************** Footer *******************************/
 
-@import "./navbar.css";
+
