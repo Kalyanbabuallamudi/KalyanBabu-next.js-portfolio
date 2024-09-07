@@ -53,29 +53,46 @@ export const projects = [
   // Sample skills data
 export const skills = [
   {
-    name: 'JavaScript',
-    icon: '/js.png', // Replace with actual path to icon
+    name: 'Artificial Intelligence',
+    icon: '/ai.png', // Replace with actual path to icon
   },
   {
-    name: 'TypeScript',
-    icon: '/ts.png', // Replace with actual path to icon
+    name: 'Machine Learning',
+    icon: '/ml.png', // Replace with actual path to icon
   },
   {
-    name: 'React',
-    icon: '/react.png', // Replace with actual path to icon
+    name: '',
+    icon: '/tensorflow.png', // Replace with actual path to icon
   },
   {
-    name: 'Next.js',
-    icon: '/next.png', // Replace with actual path to icon
+    name: 'Python',
+    icon: '/python.png', // Replace with actual path to icon
+  },
+  {
+    name: '',
+    icon: '/mdb.png', // Replace with actual path to icon
   },
   {
     name: 'Node.js',
     icon: '/node.png', // Replace with actual path to icon
   },
   {
-    name: 'Python',
-    icon: '/python.png'
+    name: 'Next.js',
+    icon: '/next.png'
+  },
+  {
+    name: 'JavaScript',
+    icon: '/js.png'
+  },
+  {
+    name: 'TypeScript',
+    icon: '/ts.png'
+  },
+  {
+    name: 'React',
+    icon: '/react.png', // Replace with actual path to icon
   }
+
   // Add more skills as needed
 ];
 

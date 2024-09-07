@@ -55,12 +55,9 @@ input, textarea, select {
 
 /******************** ENDED GLOBAL STYLES ********************/
 
-/******************** STARTED PROJECTS PAGE STYLES ********************/
-
 /* Container styles */
 #projects {
   padding: 4rem 2rem;
-  
 }
 
 .container {
@@ -82,7 +79,6 @@ h1 {
 
 h1:hover {
   color: #0070f3;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 p {
@@ -103,18 +99,19 @@ p {
 /* Card styles */
 .card {
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
   padding: 2rem;
   text-align: center;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  background-color: rgb(255, 255, 255); /* Keep a clean background initially */
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: #f1f1f1;
+  transform: translateY(-5px); /* Lift effect on hover */
+  background-color: #05e2f2; /* Pink background on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Title and description styles */
@@ -148,7 +145,7 @@ p {
 /* Technology image styles */
 .technologyImage {
   border-radius: 6px;
-  background: #e0e0e0;
+  background: #df1223;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 60px;
   height: 60px;
@@ -197,14 +194,13 @@ p {
   border-radius: 8px;
   background: #e0e0e0;
   cursor: pointer;
-  color: #0070f3;
+  color: #f30086;
   font-weight: 600;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .videoWrapper:hover {
-  background: #0070f3;
-  
+  background: #7500f3;
 }
 
 /* Video Overlay styles */
@@ -229,8 +225,6 @@ p {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(6, 202, 202, 0.2);
 }
-
-/******************** ENDED PROJECTS PAGE STYLES ********************/
 
 
 
@@ -295,6 +289,7 @@ p {
 
 #internships p:hover {
   color: #4b5563; /* Darker gray on hover */
+  
 }
 
 #internships .grid {
@@ -314,8 +309,9 @@ p {
 }
 
 #internships .relative:hover {
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 30px rgba(241, 8, 97, 0.957);
   transform: translateY(-5px); /* Lift effect on hover */
+  background-color: #058eef;
 }
 
 #internships .text-xl {
@@ -494,10 +490,12 @@ p {
 
 #skills {
   padding: 3rem 1.5rem; /* Adjust padding for better spacing */
+  box-shadow: #2563eb;
 }
 
 #skills h1:hover {
   transform: scale(1.05); /* Scaling effect on hover */
+
 }
 
 #skills p {
@@ -511,6 +509,7 @@ p {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  box-shadow: #2563eb;
 }
 
 #skills .relative {
@@ -520,12 +519,14 @@ p {
   padding: 1.5rem;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   background-color: #ffffff;
+  box-shadow: #eb2525;
 }
 
 #skills .relative:hover {
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 30px rgba(8, 109, 241, 0.957);
   transform: scale(1.05); /* Scaling effect on hover */
-  background-color: #f9fafb; /* Light gray background on hover */
+  background-color: #fbf9fa; /* Light gray background on hover */
+  
 }
 
 #skills .relative img {
@@ -533,6 +534,7 @@ p {
   transition: transform 0.3s ease-in-out;
   width: auto; /* Ensure width is auto to maintain aspect ratio */
   height: auto; /* Ensure height is auto to maintain aspect ratio */
+  box-shadow: #252feb;
 }
 
 #skills .relative img:hover {
@@ -542,13 +544,14 @@ p {
 #skills h2 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111827; /* Dark color for skill name */
+  color: hsla(239, 95%, 49%, 0.82); /* Dark color for skill name */
   margin-bottom: 0.5rem;
   transition: color 0.3s ease-in-out;
 }
 
 #skills h2:hover {
   color: #3b82f6; /* Blue color on hover */
+  
 }
 
 /****************** Ended Skills **********************/
@@ -569,7 +572,7 @@ p {
 }
 
 #education .shadow-lg {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  box-shadow: 0 20px 30px rgba(8, 109, 241, 0.957);
   border-radius: 0.75rem; /* Rounded corners */
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
   background-color: #ffffff; /* White background for cards */
@@ -634,6 +637,92 @@ body {
 
 
 /**************** CERTIFICATIONS ****************************/
+/* Certifications Section */
+
+#certifications {
+  padding: 4rem 1.5rem;
+}
+
+#certifications .max-w-4xl {
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#certifications h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827; /* Dark color for heading */
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#certifications h1:hover {
+  color: #2563eb; /* Blue color on hover */
+  transform: scale(1.05);
+}
+
+#certifications p {
+  font-size: 1.125rem;
+  color: #6b7280; /* Gray color for description */
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
+}
+
+#certifications p:hover {
+  color: #4b5563; /* Darker gray on hover */
+}
+
+#certifications .grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+#certifications .relative {
+  position: relative;
+  border-radius: 0.5rem;
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#certifications .relative:hover {
+  box-shadow: 0 20px 30px rgba(238, 0, 0, 0.776); /* Blue shadow on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+  background-color: #e0f2fe; /* Light blue background on hover */
+}
+
+#certifications .text-xl {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827; /* Dark color for certification title */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#certifications .text-xl:hover {
+  color: #2563eb; /* Blue color on hover */
+  transform: scale(1.02);
+}
+
+#certifications .text-gray-500 {
+  color: #6b7280; /* Gray color for issuer */
+}
+
+#certifications .text-blue-500 {
+  color: #2563eb; /* Blue color for links */
+  font-weight: 600;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+#certifications .text-blue-500:hover {
+  color: #1d4ed8; /* Darker blue on hover */
+  text-decoration: underline;
+}
 
 /**************** CERTIFICATIONS ****************************/
 
