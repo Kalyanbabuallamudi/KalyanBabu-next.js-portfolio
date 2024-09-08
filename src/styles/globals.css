@@ -54,6 +54,148 @@ input, textarea, select {
 }
 
 /******************** ENDED GLOBAL STYLES ********************/
+/*************** Home Styles ***********************/
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h2, p {
+  margin: 0;
+  color: #fff;
+}
+
+/* Home Section Styling */
+#home {
+  
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 80%);
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Profile Image */
+#home img {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+#home img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 45px rgba(255, 255, 255, 0.2);
+}
+
+/* Live Text Animation */
+.live-text {
+  font-size: 3rem;
+  color: #e3e3e3;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.social-icons a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #ff6347;
+  transform: scale(1.2);
+}
+
+/* About Me Section */
+.about-me {
+  background: rgba(255, 99, 71, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 8px 30px rgba(255, 99, 71, 0.3);
+  max-width: 600px;
+}
+
+.about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6347;
+}
+
+.about-me p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #home img {
+    width: 150px;
+    height: 150px;
+  }
+  .live-text {
+    font-size: 2rem;
+  }
+  .about-me {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+
+/*************** Home Styles ***********************/
 
 /*************** Resume Styles ***********************/
 /* Styling for the resume section */
@@ -386,12 +528,11 @@ p {
 
 /*****************Internship Ended****************/
 /***************** Contact Form *********/
-/***************** Contact Form *********/
 
-/* Contact Section */
+/* Section */
 #contact {
-  padding: 6rem 2rem; /* Consistent padding */
-  background: linear-gradient(135deg, #0958c7, #0ae967); /* Light gradient background for a clean look */
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #0958c7, #0ae967); /* Adjusted gradient */
 }
 
 #contact .max-w-4xl {
@@ -401,41 +542,41 @@ p {
 }
 
 #contact h1 {
-  font-size: 3rem;
+  font-size: 2.5rem; /* Responsive font size */
   font-weight: 900;
-  color: #2d2d2d; /* Dark charcoal for heading */
+  color: #2d2d2d;
   margin-bottom: 2rem;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: color 0.3s ease-in-out, transform 0.4s ease-in-out, text-shadow 0.4s ease-in-out;
 }
 
 #contact h1:hover {
-  color: #ff6f00; /* Bright orange color on hover */
+  color: #ff6f00;
   transform: scale(1.1);
-  text-shadow: 0 6px 12px rgba(255, 111, 0, 0.6); /* Bright orange glow effect */
+  text-shadow: 0 6px 12px rgba(255, 111, 0, 0.6);
 }
 
 .contact-container {
-  max-width: 700px; /* Wider form */
+  max-width: 650px; /* Narrower form for mobile */
   margin: 0 auto;
-  padding: 2rem; /* Padding to match certifications */
-  background: rgba(227, 66, 66, 0.8); /* Slightly transparent background */
-  border-radius: 1rem; /* Rounded edges */
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  padding: 1.5rem; /* Reduced padding for smaller devices */
+  background: rgba(227, 66, 66, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
 
 .contact-container:hover {
-  box-shadow: 0 25px 45px rgba(255, 111, 0, 0.5); /* Bright orange shadow on hover */
+  box-shadow: 0 25px 45px rgba(255, 111, 0, 0.5);
   transform: translateY(-10px);
-  background-color: rgba(255, 111, 0, 0.1); /* Very light orange background on hover */
+  background-color: rgba(255, 111, 0, 0.1);
 }
 
 /* Styling for form elements */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Increased gap for better spacing */
+  gap: 1.5rem;
   padding: 2rem;
 }
 
@@ -445,87 +586,130 @@ p {
 
 .form-group label {
   font-weight: bold;
-  font-size: 1.1rem; /* Slightly larger font for accessibility */
-  color: #2d2d2d; /* Dark charcoal for labels */
+  font-size: 1.1rem;
+  color: #2d2d2d;
   transition: color 0.3s ease-in-out;
 }
 
 .form-group label:hover {
-  color: #ff6f00; /* Bright orange color on hover */
+  color: #ff6f00;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 15px;
+  padding: 1rem;
   margin-top: 8px;
-  font-size: 1.1rem;
-  border: 2px solid rgba(0, 0, 0, 0.3); /* Softer border */
-  border-radius: 1rem; /* Rounded input edges */
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent input */
-  color: #2d2d2d; /* Dark charcoal text color */
-  transition: all 0.3s ease; /* Smooth transitions */
+  font-size: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #2d2d2d;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #ff6f00; /* Bright orange border on focus */
-  box-shadow: 0 0 10px 2px #ff6f00; /* Glowing effect on focus */
+  border-color: #ff6f00;
+  box-shadow: 0 0 10px 2px #ff6f00;
   outline: none;
-  background-color: rgba(255, 255, 255, 1); /* Solid background on focus */
+  background-color: rgba(255, 255, 255, 1);
 }
 
 /* Submit button */
 .submit-button {
-  background-color: #ff6f00; /* Bright orange */
+  background-color: #ff6f00;
   color: #fff;
-  padding: 15px 30px; /* Larger button for easier clicking */
-  font-size: 1.3rem; /* Increased font size for readability */
+  padding: 15px 30px;
+  font-size: 1.2rem; /* Slightly reduced size for mobile */
   border: none;
-  border-radius: 30px; /* Pill-shaped button */
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.4s ease, transform 0.2s ease; /* Smooth transitions */
-  box-shadow: 0 5px 15px rgba(255, 111, 0, 0.3); /* Button shadow */
+  transition: background-color 0.4s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(255, 111, 0, 0.3);
 }
 
 .submit-button:hover {
-  background-color: #ffcc00; /* Change to yellow on hover */
-  transform: translateY(-3px); /* Slight lift effect */
-  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.5); /* Stronger shadow */
+  background-color: #ffcc00;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.5);
 }
 
 p {
-  font-size: 1.1rem;
-  color: #2d2d2d; /* Dark charcoal text color */
+  font-size: 1rem;
+  color: #2d2d2d;
   margin-top: 25px;
-  letter-spacing: 0.05em; /* Slight letter spacing for readability */
+  letter-spacing: 0.05em;
 }
 
 p a {
-  color: #ff6f00; /* Bright orange link for visibility */
+  color: #ff6f00;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 p a:hover {
-  color: #e65100; /* Slightly darker orange on hover */
+  color: #e65100;
   text-decoration: underline;
 }
 
 /* Success and Error messages */
 .contact-container p {
-  color: #4caf50; /* Bright green for success */
+  color: #4caf50;
   font-weight: bold;
   margin-top: 10px;
 }
 
 .contact-container p.error {
-  color: #f44336; /* Bright red for errors */
+  color: #f44336;
   font-weight: bold;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #contact {
+    padding: 4rem 1.5rem; /* Adjust padding for tablets */
+  }
+
+  #contact h1 {
+    font-size: 2.2rem; /* Slightly smaller heading for tablets */
+  }
+
+  .contact-container {
+    padding: 1.5rem; /* Adjust padding for tablet view */
+  }
+
+  .submit-button {
+    font-size: 1.1rem; /* Adjust button size */
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 3rem 1rem; /* Smaller padding for mobile */
+  }
+
+  #contact h1 {
+    font-size: 1.8rem; /* Adjust font size for mobile */
+  }
+
+  .contact-container {
+    padding: 1rem; /* Reduced padding for mobile */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px; /* Smaller padding for input fields */
+  }
+
+  .submit-button {
+    font-size: 1rem; /* Smaller button text */
+    padding: 12px 20px; /* Adjust button padding for mobile */
+  }
+}
 
 /***************** Contact Form *********/
+
 
 
 /***************************** Three.js Background Styles **********/
@@ -682,73 +866,109 @@ p a:hover {
 /*******************Started Education**************************/
 
 #education {
-  padding: 4rem 2rem; /* Increased padding for better spacing */
-  background: linear-gradient(135deg, #03e6eee6, #2cec05); /* Light gradient background for more depth */
-  background-attachment: fixed; /* Keeps the background fixed during scroll for a parallax effect */
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #03e6eee6, #2cec05);
+  background-attachment: scroll; /* Change to 'scroll' for better mobile support */
+  overflow: hidden; /* Ensures background stays consistent on smaller screens */
 }
 
 #education .space-y-6 > * + * {
-  margin-top: 1.5rem; /* Space between items */
+  margin-top: 1.5rem;
 }
 
 #education .shadow-lg {
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  border-radius: 1rem; /* More rounded corners */
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transitions */
-  background-color: #e0f7fa; /* Light teal background for cards */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: #e0f7fa;
 }
 
 #education .shadow-lg:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-  transform: translateY(-8px); /* Increased lift effect on hover */
-  background-color: #b2ebf2; /* Slightly darker teal on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+  background-color: #b2ebf2;
 }
 
 #education .flex {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
+  flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
 }
 
 #education .flex .mr-4 {
-  margin-right: 2rem; /* Increased spacing for logos */
+  margin-right: 2rem;
 }
 
 #education img {
-  border-radius: 1rem; /* Rounded corners for logos */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #education img:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #education h3 {
-  font-size: 1.6rem; /* Larger font size for degree */
-  font-weight: 700; /* Bold font weight */
-  color: #00796b; /* Teal color for degree */
-  margin-bottom: 0.5rem; /* Bottom margin */
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00796b;
+  margin-bottom: 0.5rem;
 }
 
 #education p {
-  font-size: 1.1rem; /* Larger font size for better readability */
-  color: #004d40; /* Dark teal color for text */
-  line-height: 1.7; /* Improved readability */
+  font-size: 1.1rem;
+  color: #004d40;
+  line-height: 1.7;
 }
 
 #education p.mb-1 {
-  margin-bottom: 0.25rem; /* Adjusted margin for institution */
+  margin-bottom: 0.25rem;
 }
 
 #education p.mb-2 {
-  margin-bottom: 0.5rem; /* Adjusted margin for duration */
+  margin-bottom: 0.5rem;
 }
 
 #education p:last-of-type {
-  color: #00796b; /* Teal color for description */
+  color: #00796b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #education {
+    padding: 3rem 1rem; /* Reduced padding for smaller screens */
+  }
+  
+  #education h3 {
+    font-size: 1.4rem; /* Smaller font size for better fit */
+  }
+  
+  #education p {
+    font-size: 1rem; /* Adjusted font size */
+  }
+  
+  #education .flex .mr-4 {
+    margin-right: 1rem; /* Adjust spacing for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #education {
+    padding: 2rem 0.5rem; /* Further reduced padding for very small screens */
+  }
+  
+  #education h3 {
+    font-size: 1.2rem;
+  }
+  
+  #education p {
+    font-size: 0.9rem; /* More adjustments for readability */
+  }
 }
 
 /*******************Ended Education**************************/
+
 
 
 /**************** CERTIFICATIONS ****************************/

@@ -3,22 +3,7 @@ import Head from 'next/head';
 import '../../styles/globals.css';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
-
-const texts = [
-  'Welcome to my portfolio!',
-  'Hello, I\'m Kalyan Babu', 
-  'A Fullstack Developer',
-  'An AI Enthusiast',
-];
-
-const aboutMeSentences = [
-  
-  "I create engaging and user-friendly web apps.",
-  "I’m passionate about delivering innovative solutions.",
-  "I enjoy exploring new technologies and contributing to open-source.",
-  "I'm eager to learn, grow, and collaborate.",
-  "Let's connect and create something amazing!",
-];
+import { texts, aboutMeSentences } from '@/data/scripts';
 
 const HomeSection = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -29,7 +14,7 @@ const HomeSection = () => {
   const aboutMeTypingRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const typingSpeed = 100; 
+    const typingSpeed = 100;
     const pauseDuration = 1200;
 
     const typeText = () => {
@@ -98,7 +83,7 @@ const HomeSection = () => {
           rel="stylesheet"
         />
       </Head>
-      <section id="home" className="relative h-screen flex items-center justify-center mt-16"> {/* Added mt-16 for margin-top */}
+      <section id="home" className="relative h-screen flex items-center justify-center mt-16">
         <div className="relative z-10 flex flex-col items-center text-center p-6">
           <motion.img 
             src="/myphoto.jpg" 
@@ -156,7 +141,6 @@ const HomeSection = () => {
             </motion.a>
           </div>
 
-          {/* About Me Section */}
           <motion.div 
             className="mt-10 p-6 bg-orange-200 rounded-lg shadow-lg text-left max-w-lg mx-auto"
             initial={{ opacity: 0 }}

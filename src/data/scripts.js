@@ -1,3 +1,23 @@
+/*******************Home Page *******************/
+// scripts.js
+
+export const texts = [
+  'Welcome to my portfolio!',
+  'Hello, I\'m Kalyan Babu', 
+  'A Fullstack Developer',
+  'An AI Enthusiast',
+];
+
+export const aboutMeSentences = [
+  "I create engaging and user-friendly web apps.",
+  "I’m passionate about delivering innovative solutions.",
+  "I enjoy exploring new technologies and contributing to open-source.",
+  "I'm eager to learn, grow, and collaborate.",
+  "Let's connect and create something amazing!",
+];
+
+/*******************Home Page *******************/
+
 export const projects = [
   {
     title: 'AI Chatbot',
