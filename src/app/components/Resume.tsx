@@ -12,8 +12,8 @@ const Resume: React.FC = () => {
           Interested in learning more about my experience? Download my resume using the link below.
         </p>
         <a
-          href="/resume.pdf"
-          download="Resume.pdf"  // This attribute triggers the download
+          href="/KalyanBabu_resume.pdf"
+          download="Kalyanbabu_Resume.pdf"  // This attribute triggers the download
           className="text-white bg-blue-500 hover:bg-blue-600 font-semibold py-2 px-4 rounded flex items-center justify-center gap-2 transition-colors"
         >
           <FontAwesomeIcon icon={faDownload} />
