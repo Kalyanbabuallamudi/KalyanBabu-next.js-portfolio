@@ -34,8 +34,4 @@ const Certifications = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Certifications;
-=======
-export default Certifications;
->>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8

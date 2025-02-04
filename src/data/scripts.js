@@ -33,13 +33,8 @@ export const projects = [
     technologies: ['/react.png', '/tailwind.png', '/framer-motion.jpg'],
     githubLink: 'https://github.com/Kalyanbabuallamudi/dsa-pathfinding-visualizer',
     className: 'project-gemini-bq',
-<<<<<<< HEAD
-    videoUrl: '/DSA Path Visualizer Project.mp4' // Correct Google Drive embed link
-},
-=======
-    videoUrl: '/', // Add the video URL here
+    videoUrl: '/DSA Path Visualizer Project.mp4', // Add the video URL here
   },
->>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8
   {
     title: 'Python Based CHATGPT',
     description: 'A powerful tool that integrates Python with OpenAI’s GPT models to create interactive conversations.',
@@ -56,14 +51,11 @@ export const projects = [
 /****************** Start Internship  JS ******************/
   export const internships = [
     {
-<<<<<<< HEAD
       company: 'Bluestock Fintech, Pune, India',
       role: 'Software Development Intern',
       certificate: '/sde.jpg', // Replace with the actual path to your certificate image
     },
     {
-=======
->>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8
       company: 'Google, California, USA',
       role: 'Google AI-ML Intern',
       certificate: '/aiml.jpg', // Replace with the actual path to your certificate image
@@ -94,11 +86,7 @@ export const skills = [
     icon: '/ml.png', // Replace with actual path to icon
   },
   {
-<<<<<<< HEAD
     name: 'Tensor flow',
-=======
-    name: '',
->>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8
     icon: '/tensorflow.png', // Replace with actual path to icon
   },
   {
@@ -106,11 +94,7 @@ export const skills = [
     icon: '/python.png', // Replace with actual path to icon
   },
   {
-<<<<<<< HEAD
     name: 'MongoDB',
-=======
-    name: '',
->>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8
     icon: '/mdb.png', // Replace with actual path to icon
   },
   {
@@ -168,38 +152,25 @@ export const skills = [
 /*********************** CERTIFICATIONS ******************/
 export const certifications = [
   {
-<<<<<<< HEAD
     title: "Salesforce Certified AI Associate",
     issuer: "Salesforce",
     image: "/aiassociate.jpg",
     link: "https://drive.google.com/file/d/1GTIDcF36rJ0DQ7jhc76b1pxdeDjsbx_Q/view?usp=sharing"
   },
   {
-    title: "Google Certified Data Analytics",
-=======
     title: "Certified Google Data Analytics",
->>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8
     issuer: "Google",
     image: "/Google Data Analytics - Kalyan Babu Allamudi.jpg",
     link: "https://coursera.org/share/b4faa95b4baa6cd70eee59cd11caee65"
   },
   {
-<<<<<<< HEAD
     title: "Microsoft Certified Azure AI Fundamentals",
     issuer: "Microsoft",
     image: "/msai.jpg",
     link: "https://learn.microsoft.com/api/credentials/share/en-gb/KalyanBabuAllamudi-0815/3886D0A0ED197450?sharingId=6E1D31C8E341421"
   }
 ];
-=======
-    title: "Certified Azure AI Fundamentals",
-    issuer: "Microsoft",
-    image: "/Azure.jpg",
-    link: "https://learn.microsoft.com/api/credentials/share/en-gb/KalyanBabuAllamudi-0815/3886D0A0ED197450?sharingId=6E1D31C8E341421"
-  }
-];
 
 /*********************** CERTIFICATIONS ******************/
->>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8
 
 /*********************** CERTIFICATIONS ******************/
