@@ -1,3 +1,23 @@
+/*******************Home Page *******************/
+// scripts.js
+
+export const texts = [
+  'Welcome to my portfolio!',
+  'Hello, I\'m Kalyan Babu', 
+  'A Fullstack Developer',
+  'An AI Enthusiast',
+];
+
+export const aboutMeSentences = [
+  "I create engaging and user-friendly web apps.",
+  "I’m passionate about delivering innovative solutions.",
+  "I enjoy exploring new technologies and contributing to open-source.",
+  "I'm eager to learn, grow, and collaborate.",
+  "Let's connect and create something amazing!",
+];
+
+/*******************Home Page *******************/
+
 export const projects = [
   {
     title: 'AI Chatbot',
@@ -5,20 +25,23 @@ export const projects = [
     technologies: ['/python.png', '/nltk.png', '/flask.png', '/tensorflow.png', '/googlecloudt2s.png', '/mongodb.png'],
     githubLink: 'https://github.com/Kalyanbabuallamudi/AI-Chatbot-',
     className: 'project-ai-chatbot',
+    videoUrl: '/chatbot_demo.mp4', // Add the video URL here
   },
   {
-    title: 'Gemini BQ Functions',
-    description: 'A cutting-edge platform for managing and executing BigQuery functions seamlessly.',
-    technologies: ['/gemini.png', '/cloud.png', '/query.png'],
-    githubLink: 'https://github.com/Kalyanbabuallamudi/Gemini-BQ-Function',
+    title: 'DSA Pathfinding Visualizer: Real-Time Algorithm Insights and Visualization',
+    description: 'An interactive web application that visually demonstrates popular pathfinding algorithms, helping users understand how graph traversal works in real-time.',
+    technologies: ['/react.png', '/tailwind.png', '/framer-motion.jpg'],
+    githubLink: 'https://github.com/Kalyanbabuallamudi/dsa-pathfinding-visualizer',
     className: 'project-gemini-bq',
-  },
+    videoUrl: '/DSA Path Visualizer Project.mp4' // Correct Google Drive embed link
+},
   {
     title: 'Python Based CHATGPT',
     description: 'A powerful tool that integrates Python with OpenAI’s GPT models to create interactive conversations.',
     technologies: ['/python.png', '/OpenAI.png', '/API.png'],
     githubLink: 'https://github.com/Kalyanbabuallamudi/OpenAIChatbot-using-Python',
     className: 'project-chatgpt',
+    videoUrl: '/', // Add the video URL here
   },
 ];
 
@@ -28,14 +51,25 @@ export const projects = [
 /****************** Start Internship  JS ******************/
   export const internships = [
     {
+      company: 'Bluestock Fintech, Pune, India',
+      role: 'Software Development Intern',
+      certificate: '/sde.jpg', // Replace with the actual path to your certificate image
+    },
+    {
+      company: 'Google, California, USA',
+      role: 'Google AI-ML Intern',
+      certificate: '/aiml.jpg', // Replace with the actual path to your certificate image
+    },
+    
+    {
       company: 'Amazon, Washington, USA',
       role: 'AWS Intern',
-      certificate: '/certificate-company-a.jpg', // Replace with the actual path to your certificate image
+      certificate: '/aws.jpg', // Replace with the actual path to your certificate image
     },
     {
       company: 'Business Web Solutions, New Delhi',
       role: 'FullStack Intern',
-      certificate: '/certificate-company-b.png', // Replace with the actual path to your certificate image
+      certificate: '/fs.jpg', // Replace with the actual path to your certificate image
     },
   ];
   /****************** End Internship  JS ******************/
@@ -44,29 +78,46 @@ export const projects = [
   // Sample skills data
 export const skills = [
   {
-    name: 'JavaScript',
-    icon: '/js.png', // Replace with actual path to icon
+    name: 'Artificial Intelligence',
+    icon: '/ai.png', // Replace with actual path to icon
   },
   {
-    name: 'TypeScript',
-    icon: '/ts.png', // Replace with actual path to icon
+    name: 'Machine Learning',
+    icon: '/ml.png', // Replace with actual path to icon
   },
   {
-    name: 'React',
-    icon: '/react.png', // Replace with actual path to icon
+    name: 'Tensor flow',
+    icon: '/tensorflow.png', // Replace with actual path to icon
   },
   {
-    name: 'Next.js',
-    icon: '/next.png', // Replace with actual path to icon
+    name: 'Python',
+    icon: '/python.png', // Replace with actual path to icon
+  },
+  {
+    name: 'MongoDB',
+    icon: '/mdb.png', // Replace with actual path to icon
   },
   {
     name: 'Node.js',
     icon: '/node.png', // Replace with actual path to icon
   },
   {
-    name: 'Python',
-    icon: '/python.png'
+    name: 'Next.js',
+    icon: '/next.png'
+  },
+  {
+    name: 'JavaScript',
+    icon: '/js.png'
+  },
+  {
+    name: 'TypeScript',
+    icon: '/ts.png'
+  },
+  {
+    name: 'React',
+    icon: '/react.png', // Replace with actual path to icon
   }
+
   // Add more skills as needed
 ];
 
@@ -97,16 +148,27 @@ export const skills = [
 
 /************************ About  *************/
 
-// scripts.js
 
-// Function to handle any additional dynamic behavior in About component
-export const initializeAboutSection = () => {
-  // Example: Add some interactive effects or logic here
-  console.log('About section initialized');
+/*********************** CERTIFICATIONS ******************/
+export const certifications = [
+  {
+    title: "Salesforce Certified AI Associate",
+    issuer: "Salesforce",
+    image: "/aiassociate.jpg",
+    link: "https://drive.google.com/file/d/1GTIDcF36rJ0DQ7jhc76b1pxdeDjsbx_Q/view?usp=sharing"
+  },
+  {
+    title: "Google Certified Data Analytics",
+    issuer: "Google",
+    image: "/Google Data Analytics - Kalyan Babu Allamudi.jpg",
+    link: "https://coursera.org/share/b4faa95b4baa6cd70eee59cd11caee65"
+  },
+  {
+    title: "Microsoft Certified Azure AI Fundamentals",
+    issuer: "Microsoft",
+    image: "/msai.jpg",
+    link: "https://learn.microsoft.com/api/credentials/share/en-gb/KalyanBabuAllamudi-0815/3886D0A0ED197450?sharingId=6E1D31C8E341421"
+  }
+];
 
-  // Example: You can use this function to add event listeners or other dynamic behaviors
-  // document.querySelector('.about-me-section')?.addEventListener('click', () => {
-  //   alert('About section clicked');
-  // });
-};
-
+/*********************** CERTIFICATIONS ******************/

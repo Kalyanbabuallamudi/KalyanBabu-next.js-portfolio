@@ -1,0 +1,27 @@
+'use client';
+import '../../styles/globals.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+
+const Resume: React.FC = () => {
+  return (
+    <section id="resume" className="py-12 px-6 text-center bg-[#f9f9f9]">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-6">Resume</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          Interested in learning more about my experience? Download my resume using the link below.
+        </p>
+        <a
+          href="/KalyanBabu_resume.pdf"
+          download="Kalyanbabu_Resume.pdf"  // This attribute triggers the download
+          className="text-white bg-blue-500 hover:bg-blue-600 font-semibold py-2 px-4 rounded flex items-center justify-center gap-2 transition-colors"
+        >
+          <FontAwesomeIcon icon={faDownload} />
+          Click to download my Resume
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default Resume;

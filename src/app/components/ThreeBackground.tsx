@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
@@ -11,14 +12,14 @@ const ThreeBackground = () => {
     // Create the scene
     const scene = new THREE.Scene();
 
-    // Set the background to a cool gradient
+    // Set the background to a gradient
     const gradientTexture = new THREE.TextureLoader().load('data:image/svg+xml;base64,' + 
       btoa(`
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#00C9FF;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#92FE9D;stop-opacity:1" />
+              <stop offset="0%" style="stop-color:#ffea00;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#00ff00;stop-opacity:1" />
             </linearGradient>
           </defs>
           <rect width="100%" height="100%" fill="url(#grad1)" />
@@ -36,8 +37,9 @@ const ThreeBackground = () => {
     camera.position.z = 5;
 
     // Set up the renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
     mount.appendChild(renderer.domElement);
 
     // Create the particle system
@@ -55,7 +57,7 @@ const ThreeBackground = () => {
     );
 
     const particlesMaterial = new THREE.PointsMaterial({
-      color: '#ffffff', // Color of the particles
+      color: '#ffffff',
       size: 0.005,
     });
 
@@ -71,8 +73,18 @@ const ThreeBackground = () => {
 
     animate();
 
+    // Handle window resizing
+    const handleResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
     // Clean up on unmount
     return () => {
+      window.removeEventListener('resize', handleResize);
       mount.removeChild(renderer.domElement);
     };
   }, []);

@@ -1,11 +1,10 @@
 'use client';
-import Link from 'next/link';
+import { useState } from 'react';
 import Image from 'next/image';
 import { useSpring, animated } from '@react-spring/web';
 import { projects } from '@/data/scripts'; // Use the imported `projects` array here
 import '../../styles/globals.css';
 
-// Define the props interface
 interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string; // className is optional
@@ -34,6 +33,16 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className }) => {
 };
 
 const Projects = () => {
+  const [activeProjectIndex, setActiveProjectIndex] = useState<number | null>(null);
+
+  const handleVideoClick = (index: number) => {
+    setActiveProjectIndex(index);
+  };
+
+  const handleCloseVideo = () => {
+    setActiveProjectIndex(null);
+  };
+
   return (
     <section id="projects">
       <div className="container">
@@ -57,7 +66,7 @@ const Projects = () => {
                 ))}
               </div>
               <div className="githubLink">
-                <Link
+                <a
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -68,8 +77,19 @@ const Projects = () => {
                     width={30}
                     height={30}
                   />
-                </Link>
+                </a>
               </div>
+              <div className="videoWrapper" onClick={() => handleVideoClick(index)}>
+                <p>Watch Video</p>
+              </div>
+              {activeProjectIndex === index && (
+                <div className="videoOverlay" onClick={handleCloseVideo}>
+                  <video controls className="videoPlayer" onClick={(e) => e.stopPropagation()}>
+                    <source src={project.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              )}
             </AnimatedCard>
           ))}
         </div>
