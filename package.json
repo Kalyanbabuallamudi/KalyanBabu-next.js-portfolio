@@ -3,17 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3002",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3002",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
-=======
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
->>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-spring/web": "^9.7.4",
     "@react-three/drei": "^9.111.3",
