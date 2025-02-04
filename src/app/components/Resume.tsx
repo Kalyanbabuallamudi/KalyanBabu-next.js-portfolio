@@ -24,4 +24,8 @@ const Resume: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Resume;
+=======
+export default Resume;
+>>>>>>> 156336f927843e3ca83e7d49f0f73c8c074012c8
