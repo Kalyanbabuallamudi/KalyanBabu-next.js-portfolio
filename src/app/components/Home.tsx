@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
-import '../../styles/globals.css';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import '../../styles/globals.css';
 import { texts, aboutMeSentences } from '@/data/scripts';
 
 const HomeSection = () => {
@@ -14,15 +14,15 @@ const HomeSection = () => {
   const aboutMeTypingRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const typingSpeed = 100;
-    const pauseDuration = 1200;
+    const typingSpeed = 80;
+    const pauseDuration = 1000;
 
     const typeText = () => {
       let charIndex = 0;
       setDisplayedText('');
 
       typingRef.current = setInterval(() => {
-        setDisplayedText(prev => {
+        setDisplayedText((prev) => {
           const text = texts[currentTextIndex];
           if (charIndex < text.length) {
             charIndex += 1;
@@ -30,7 +30,7 @@ const HomeSection = () => {
           } else {
             clearInterval(typingRef.current as NodeJS.Timeout);
             typingRef.current = setTimeout(() => {
-              setCurrentTextIndex(prevIndex => (prevIndex + 1) % texts.length);
+              setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
               typeText();
             }, pauseDuration);
             return text;
@@ -45,15 +45,15 @@ const HomeSection = () => {
   }, [currentTextIndex]);
 
   useEffect(() => {
-    const aboutMeTypingSpeed = 70;
-    const aboutMePauseDuration = 2000;
+    const aboutMeTypingSpeed = 60;
+    const aboutMePauseDuration = 1800;
 
     const typeAboutMeSentence = () => {
       let charIndex = 0;
       setAboutMeText('');
 
       aboutMeTypingRef.current = setInterval(() => {
-        setAboutMeText(prev => {
+        setAboutMeText((prev) => {
           const sentence = aboutMeSentences[currentSentenceIndex];
           if (charIndex < sentence.length) {
             charIndex += 1;
@@ -61,7 +61,7 @@ const HomeSection = () => {
           } else {
             clearInterval(aboutMeTypingRef.current as NodeJS.Timeout);
             aboutMeTypingRef.current = setTimeout(() => {
-              setCurrentSentenceIndex(prevIndex => (prevIndex + 1) % aboutMeSentences.length);
+              setCurrentSentenceIndex((prevIndex) => (prevIndex + 1) % aboutMeSentences.length);
               typeAboutMeSentence();
             }, aboutMePauseDuration);
             return sentence;
@@ -83,89 +83,90 @@ const HomeSection = () => {
           rel="stylesheet"
         />
       </Head>
-      <section id="home" className="relative h-screen flex items-center justify-center mt-16">
-        <div className="relative z-10 flex flex-col items-center text-center p-6">
-          <motion.img 
-            src="/myphoto.jpg" 
-            alt="Your Photo" 
-            className="w-52 h-52 rounded-full shadow-lg mb-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+      <div className="min-h-screen flex flex-col md:flex-row bg-gradient-to-br from-blue-500 to-purple-600">
+        {/* Left Side: Profile and About Section */}
+        <div className="flex-1 flex flex-col items-center justify-center p-6 text-white">
+          <motion.img
+            src="/myphoto.jpg"
+            alt="Your Profile Photo"
+            className="w-32 h-62 md:w-40 md:h-40 rounded-full shadow-lg"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1 }}
           />
-          <motion.p 
-            className="text-2xl mb-2 live-text"
+
+          <motion.p
+            className="mt-6 text-lg md:text-2xl font-bold"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            style={{ lineHeight: '1.5' }}
+            transition={{ duration: 0.8 }}
           >
             {displayedText}
           </motion.p>
-          <div className="flex space-x-4 mt-4">
-            <motion.a 
-              href="https://github.com/Kalyanbabuallamudi" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-gray-900 transition duration-300 hover:text-gray-600"
-              whileHover={{ scale: 1.05 }}
-            >
-              <FaGithub size={24} />
-            </motion.a>
-            <motion.a 
-              href="https://www.linkedin.com/in/kalyan-babu-a4b574199" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-gray-900 transition duration-300 hover:text-gray-600"
-              whileHover={{ scale: 1.05 }}
-            >
-              <FaLinkedin size={24} />
-            </motion.a>
-            <motion.a 
-              href="https://www.instagram.com/kalyanbabu__?igsh=MXNuaGV6bG84Z2N2OQ=="
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-gray-900 transition duration-300 hover:text-gray-600"
-              whileHover={{ scale: 1.05 }}
-            >
-              <FaInstagram size={24} />
-            </motion.a>
-            <motion.a 
-              href="https://www.facebook.com/profile.php?id=61557758402598&mibextid=ZbWKwL" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-gray-900 transition duration-300 hover:text-gray-600"
-              whileHover={{ scale: 1.05 }}
-            >
-              <FaFacebook size={24} />
-            </motion.a>
+
+          <div className="flex mt-4 space-x-4">
+            {[{
+              href: 'https://github.com/Kalyanbabuallamudi',
+              icon: <FaGithub size={24} />
+            }, {
+              href: 'https://www.linkedin.com/in/kalyan-babu-a4b574199',
+              icon: <FaLinkedin size={24} />
+            }, {
+              href: 'https://www.instagram.com/kalyanbabu__?igsh=MXNuaGV6bG84Z2N2OQ==',
+              icon: <FaInstagram size={24} />
+            }, {
+              href: 'https://www.facebook.com/profile.php?id=61557758402598&mibextid=ZbWKwL',
+              icon: <FaFacebook size={24} />
+            }].map(({ href, icon }) => (
+              <motion.a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white"
+                whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.3 }}
+              >
+                {icon}
+              </motion.a>
+            ))}
           </div>
 
-          <motion.div 
-            className="mt-10 p-6 bg-orange-200 rounded-lg shadow-lg text-left max-w-lg mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
+          <motion.div
+            className="max-w-md p-6 mt-10 bg-white rounded-lg shadow-lg backdrop-blur-md bg-opacity-20"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
           >
-            <motion.h2 
-              className="text-2xl font-bold mb-4 text-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              About Me
-            </motion.h2>
-            <motion.p 
-              className="text-gray-700 text-lg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              {aboutMeText}
-            </motion.p>
+            <h2 className="mb-4 text-xl md:text-2xl font-bold text-center">About Me</h2>
+            <p className="text-base md:text-lg text-gray-200">{aboutMeText}</p>
           </motion.div>
         </div>
-      </section>
+
+        {/* Right Side: Stats Section */}
+        <div className="flex-1 flex flex-col items-center justify-center p-6">
+          <motion.div
+            className="flex flex-col items-center space-y-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            {/* GitHub Streak */}
+            <img
+              src="https://github-readme-streak-stats.herokuapp.com?user=Kalyanbabuallamudi&theme=dark"
+              alt="GitHub Streak"
+              className="rounded-lg shadow-lg"
+            />
+
+            {/* LeetCode Stats */}
+            <img
+              src="https://leetcard.jacoblin.cool/Kalyan_Babu_Allamudi_?theme=dark&hide_rank=true"
+              alt="LeetCode Stats"
+              className="rounded-lg shadow-lg"
+            />
+          </motion.div>
+        </div>
+      </div>
     </>
   );
 };

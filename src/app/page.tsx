@@ -1,7 +1,6 @@
 "use client";
 
 import Link from 'next/link';
-import ThreeBackground from './components/ThreeBackground';
 import Home from './components/Home';
 import Projects from './components/Projects';
 import Internships from './components/Internships';
@@ -23,7 +22,6 @@ const Footer = () => (
 export default function Page() {
   return (
     <>
-      <ThreeBackground />
       <Navbar />
       <Home />
       <Resume />

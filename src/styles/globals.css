@@ -9,7 +9,7 @@
 /* Apply new impressive background globally */
 body {
   @apply font-sans text-gray-800 min-h-screen flex flex-col;
-  background: linear-gradient(135deg, #ffea00 0%, #00ff00 100%); /* Yellow to Green Gradient Background */
+
   background-size: cover; /* Ensure the background covers the entire screen */
   margin: 0;
   padding: 0;
@@ -573,22 +573,6 @@ p a:hover {
 
 /***************** Contact Form *********/
 
-
-
-/***************************** Three.js Background Styles **********/
-
-/* Container for the Three.js background */
-.threeBackground {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw; /* Use viewport units to cover the entire screen */
-  height: 100vh; /* Use viewport units to cover the entire screen */
-  z-index: -1; /* Ensure it stays behind all other content */
-  pointer-events: none; /* Prevent interaction with the background */
-}
-
-/***************************** Ended Three.js Background Styles **********/
 
 
 
