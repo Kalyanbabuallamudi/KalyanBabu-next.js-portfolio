@@ -83,13 +83,15 @@ const HomeSection = () => {
           rel="stylesheet"
         />
       </Head>
-      <div className="min-h-screen flex flex-col md:flex-row bg-gradient-to-br from-blue-500 to-purple-600">
+      <div className="min-h-screen flex flex-col md:flex-row bg-gradient-to-br from-blue-500 to-purple-600 pt-20">
+        {/* Added padding-top to ensure content doesn't overlap with the navbar */}
         {/* Left Side: Profile and About Section */}
         <div className="flex-1 flex flex-col items-center justify-center p-6 text-white">
           <motion.img
             src="/myphoto.jpg"
+            height="100%"
             alt="Your Profile Photo"
-            className="w-32 h-62 md:w-40 md:h-40 rounded-full shadow-lg"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full shadow-lg transition-transform duration-500 hover:scale-110"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1 }}
@@ -123,7 +125,7 @@ const HomeSection = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
                 whileHover={{ scale: 1.2 }}
                 transition={{ duration: 0.3 }}
               >
@@ -133,7 +135,7 @@ const HomeSection = () => {
           </div>
 
           <motion.div
-            className="max-w-md p-6 mt-10 bg-white rounded-lg shadow-lg backdrop-blur-md bg-opacity-20"
+            className="max-w-md p-6 mt-10 bg-white rounded-lg shadow-lg backdrop-blur-md bg-opacity-20 transition-transform duration-500 hover:scale-105"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -151,19 +153,65 @@ const HomeSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            {/* GitHub Streak */}
-            <img
-              src="https://github-readme-streak-stats.herokuapp.com?user=Kalyanbabuallamudi&theme=dark"
-              alt="GitHub Streak"
-              className="rounded-lg shadow-lg"
-            />
+            {/* GitHub Streak 🔥 */}
+            <div className="github-streak-container">
+              <h2 className="text-white text-2xl md:text-3xl font-bold">GitHub Streak 🔥</h2>
+              <p className="text-white text-base md:text-lg">
+                Consistent contributions are a testament to my dedication and passion for coding.
+                Check out my GitHub streak, showcasing my commitment and relentless drive to improve
+                my skills every day.
+              </p>
+              <div className="streak-image-wrapper" title="Click to view my GitHub profile!">
+                <img
+                  src="https://github-readme-streak-stats.herokuapp.com?user=Kalyanbabuallamudi&theme=dark"
+                  alt="GitHub Streak"
+                  className="rounded-lg shadow-lg streak-image transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <a
+                href="https://github.com/Kalyanbabuallamudi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="view-profile-button mt-6">
+                  View My GitHub Profile
+                </button>
+              </a>
+            </div>
 
-            {/* LeetCode Stats */}
-            <img
-              src="https://leetcard.jacoblin.cool/Kalyan_Babu_Allamudi_?theme=dark&hide_rank=true"
-              alt="LeetCode Stats"
-              className="rounded-lg shadow-lg"
-            />
+            <style jsx>{`
+              .github-streak-container {
+                text-align: center;
+                padding: 20px;
+                background-color: #2d3748;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              }
+              .streak-image-wrapper {
+                position: relative;
+                display: inline-block;
+              }
+              .streak-image {
+                cursor: pointer;
+                transition: transform 0.3s;
+              }
+              .streak-image:hover {
+                transform: scale(1.05);
+              }
+              .view-profile-button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+              }
+              .view-profile-button:hover {
+                background-color: #45a049;
+              }
+            `}</style>
           </motion.div>
         </div>
       </div>

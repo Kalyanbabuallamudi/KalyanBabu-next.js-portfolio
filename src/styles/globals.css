@@ -61,36 +61,42 @@ input, textarea, select {
 /*************** Home Styles ***********************/
 
 /*************** Resume Styles ***********************/
+/*************** Resume Styles ***********************/
 /* Styling for the resume section */
-#resume {
+.resume-section {
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Light gradient background */
   padding: 3rem 1.5rem;
   text-align: center;
-  
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-top: 80px; /* Add some margin to avoid overlap with navbar */
 }
 
 /* Max-width for container and centering */
-#resume .max-w-4xl {
+.resume-section .max-w-4xl {
   max-width: 56rem;
   margin: 0 auto;
 }
 
 /* Heading styles */
-#resume h1 {
+.resume-section h1 {
   font-size: 2.25rem; /* 4xl font size */
   font-weight: 800; /* Extra bold */
   color: #1a202c; /* Dark gray */
   margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect */
 }
 
 /* Paragraph styles */
-#resume p {
+.resume-section p {
   font-size: 1.125rem; /* lg font size */
   color: #4a5568; /* Medium gray */
   margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-in-out; /* Slightly delayed fade-in effect */
 }
 
 /* Button styles */
-#resume a {
+.download-button {
   color: #ffffff; /* White text */
   background-color: #3182ce; /* Blue background */
   padding: 0.5rem 1rem; /* Padding around text */
@@ -101,60 +107,76 @@ input, textarea, select {
   justify-content: center; /* Center items horizontally */
   gap: 0.5rem; /* Space between icon and text */
   text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
 /* Button hover effect */
-#resume a:hover {
+.download-button:hover {
   background-color: #2b6cb0; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
-#resume a svg {
+.download-button svg {
   margin-right: 0.5rem; /* Space between icon and text */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
+.download-button:hover svg {
+  transform: rotate(360deg); /* Rotate icon on hover */
+}
+
+/* Keyframes for fade-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*************** Resume Styles ***********************/
 
-
-
+/*************** Resume Styles ***********************/
 
 /*************** Project Styles ***********************/
 
 /* Container styles */
-#projects {
+.projects-section {
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #5a189a, #f4a261); /* Gradient background with purple and orange */
   color: #fff;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   transition: background 0.4s ease-in-out;
 }
-.projects .max-w-4xl {
-  max-width: 300rem;
+
+/* Container centering */
+.projects-section .container {
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
-}
-/* Header styles */
-h1 {
-  font-size: 2.8rem;
-  color: #f4a261; /* Bright orange for header */
   text-align: center;
+}
+
+/* Header styles */
+.projects-section h1 {
+  font-size: 2.8rem;
+  color: #ff9f1c; /* Bright orange for header */
   margin-bottom: 1.5rem;
   font-weight: 700;
-  line-height: 1.2;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(244, 162, 97, 0.8); /* Glow effect */
+  text-shadow: 0 0 10px rgba(255, 159, 28, 0.8); /* Glow effect */
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-h1:hover {
+.projects-section h1:hover {
   color: #9d4edd; /* Purple on hover */
   text-shadow: 0 0 15px rgba(157, 78, 221, 1); /* Stronger glow */
 }
 
-p {
+/* Paragraph styles */
+.projects-section p {
   font-size: 1.2rem;
   color: #ececec; /* Light gray for better readability */
-  text-align: center;
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
@@ -188,7 +210,7 @@ p {
 /* Title and description styles */
 .card h2 {
   font-size: 1.8rem;
-  color: #f4a261;
+  color: #ff9f1c;
   margin-bottom: 1rem;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -261,7 +283,7 @@ p {
 .videoWrapper {
   margin-top: 1.5rem;
   padding: 0.5rem;
-  border: 2px solid #f4a261;
+  border: 2px solid #ff9f1c;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -298,6 +320,7 @@ p {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 /*************** End of Project Styles ***********************/
+
 /******************** STARTED INTERNSHIPS PAGE STYLES ********************/
 /* Internships Section */
 
