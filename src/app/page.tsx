@@ -14,7 +14,7 @@ import Navbar from './Navbar';
 
 const Footer = () => (
   <footer className="footer">
-    <p className="footer-heading">© 2024 Kalyan Babu made with ❤️</p>
+    <p className="footer-heading">© 2025 Kalyan Babu made with ❤️</p>
   </footer>
 );
 
