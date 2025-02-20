@@ -10,6 +10,7 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Navbar from './Navbar';
+import MusicPlayer from './components/MusicPlayer';
 
 
 const Footer = () => (
@@ -32,6 +33,7 @@ export default function Page() {
       <Education />
       <Contact />
       <Footer />
+      <MusicPlayer />
 
     </>
   );
