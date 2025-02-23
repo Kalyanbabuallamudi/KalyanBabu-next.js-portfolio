@@ -2,8 +2,9 @@
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import '../src/styles/globals.css';
-import Button from '../src/app/components/ui/button';
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
@@ -33,14 +34,18 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {/* Buttons at the top */}
-      <div className="button-container">
-        <Button onClick={handlePlay} variant="primary" disabled={isPlaying}>
-          Play
-        </Button>
-        <Button onClick={handlePause} variant="destructive" disabled={!isPlaying}>
-          Stop
-        </Button>
+      {/* Icons at the top */}
+      <div className="button-container flex space-x-4">
+        <FontAwesomeIcon
+          icon={faPlay}
+          className={`text-blue-500 text-3xl cursor-pointer ${isPlaying ? 'opacity-50 cursor-not-allowed' : ''}`}
+          onClick={handlePlay}
+        />
+        <FontAwesomeIcon
+          icon={faPause}
+          className={`text-red-500 text-3xl cursor-pointer ${!isPlaying ? 'opacity-50 cursor-not-allowed' : ''}`}
+          onClick={handlePause}
+        />
       </div>
       <Component {...pageProps} />
       <Analytics />
