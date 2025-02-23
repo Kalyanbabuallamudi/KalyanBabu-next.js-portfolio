@@ -599,8 +599,6 @@ p a:hover {
 
 
 
-
-
 /**************** Started Live Texts ************************************/
 
 /* Import Google Fonts */
@@ -954,3 +952,32 @@ p a:hover {
 
 /**************** Footer *******************************/
 
+
+/**Music player button top**/
+.button-container {
+  position: fixed;
+  top: 0;
+  right: 0; /* Align to the right */
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  padding: 0.5rem; /* Adjust padding as needed */
+  z-index: 1000;
+  background-color: white; /* Optional: Add background color to avoid overlap visibility */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+}
+
+.text-3xl {
+  font-size: 1.875rem; /* Adjust font size as needed */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
