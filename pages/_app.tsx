@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const audioInstance = new Audio('/Portfolio-Kalyan Babu.mp3');
     audioInstance.loop = true;
-    audioInstance.volume = 0.1; // Set initial volume
+    audioInstance.volume = 0.9; // Set initial volume
     setAudio(audioInstance);
   }, []);
 

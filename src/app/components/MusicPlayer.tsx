@@ -5,18 +5,22 @@ import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 const MusicPlayer = () => {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Set to true to reflect initial auto-play
 
   useEffect(() => {
     const audioInstance = new Audio('/Portfolio-Kalyan Babu.mp3');
     audioInstance.loop = true;
-    audioInstance.volume = 0.1; // Set initial volume
+    audioInstance.volume = 0.9; // Set initial volume
     setAudio(audioInstance);
 
-    // Start playing the audio directly
-    audioInstance.play().then(() => setIsPlaying(true)).catch((error) => {
-      console.error("Error playing audio: ", error);
-    });
+    // Auto-play on component mount
+    audioInstance
+      .play()
+      .then(() => setIsPlaying(true))
+      .catch((error) => {
+        console.error("Error playing audio: ", error);
+        setIsPlaying(false);
+      });
 
     // Cleanup on unmount
     return () => {
@@ -25,34 +29,34 @@ const MusicPlayer = () => {
     };
   }, []);
 
-  const handlePlay = () => {
+  const togglePlayPause = () => {
     if (audio) {
-      audio.play().then(() => setIsPlaying(true)).catch((error) => {
-        console.error("Error playing audio: ", error);
-      });
-    }
-  };
-
-  const handlePause = () => {
-    if (audio) {
-      audio.pause();
-      setIsPlaying(false);
+      if (isPlaying) {
+        audio.pause();
+        setIsPlaying(false);
+      } else {
+        audio
+          .play()
+          .then(() => setIsPlaying(true))
+          .catch((error) => {
+            console.error("Error playing audio: ", error);
+          });
+      }
     }
   };
 
   return (
     <div className="flex flex-col items-center space-y-4 p-4">
-      {/* Icons for controlling playback */}
-      <div className="button-container flex space-x-4">
+      {/* Single button for toggling play/stop */}
+      <div
+        className="button-container flex space-x-4 cursor-pointer"
+        onClick={togglePlayPause}
+      >
         <FontAwesomeIcon
-          icon={faPlay}
-          className={`text-blue-500 text-3xl cursor-pointer ${isPlaying ? 'opacity-50 cursor-not-allowed' : ''}`}
-          onClick={handlePlay}
-        />
-        <FontAwesomeIcon
-          icon={faPause}
-          className={`text-red-500 text-3xl cursor-pointer ${!isPlaying ? 'opacity-50 cursor-not-allowed' : ''}`}
-          onClick={handlePause}
+          icon={isPlaying ? faPause : faPlay}
+          className={`text-3xl ${
+            isPlaying ? 'text-green-500' : 'text-blue-500'
+          }`}
         />
       </div>
     </div>
