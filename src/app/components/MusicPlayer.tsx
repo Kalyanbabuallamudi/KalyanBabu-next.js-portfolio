@@ -5,28 +5,30 @@ import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 const MusicPlayer = () => {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(true); // Set to true to reflect initial auto-play
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const audioInstance = new Audio('/Portfolio-Kalyan Babu.mp3');
-    audioInstance.loop = true;
-    audioInstance.volume = 0.9; // Set initial volume
-    setAudio(audioInstance);
+    if (typeof window !== 'undefined') {
+      const audioInstance = new Audio('/Portfolio-Kalyan Babu.mp3');
+      audioInstance.loop = true;
+      audioInstance.volume = 0.9; // Set initial volume
+      setAudio(audioInstance);
 
-    // Auto-play on component mount
-    audioInstance
-      .play()
-      .then(() => setIsPlaying(true))
-      .catch((error) => {
-        console.error("Error playing audio: ", error);
-        setIsPlaying(false);
-      });
+      // Auto-play on component mount
+      audioInstance
+        .play()
+        .then(() => setIsPlaying(true))
+        .catch((error) => {
+          console.error("Error playing audio: ", error);
+          setIsPlaying(false);
+        });
 
-    // Cleanup on unmount
-    return () => {
-      audioInstance.pause();
-      audioInstance.currentTime = 0;
-    };
+      // Cleanup on unmount
+      return () => {
+        audioInstance.pause();
+        audioInstance.currentTime = 0;
+      };
+    }
   }, []);
 
   const togglePlayPause = () => {
