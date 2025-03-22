@@ -10,6 +10,7 @@
 body {
   @apply font-sans text-gray-800 min-h-screen flex flex-col;
 
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Light gradient background */
   background-size: cover; /* Ensure the background covers the entire screen */
   margin: 0;
   padding: 0;
@@ -55,13 +56,8 @@ input, textarea, select {
 
 /******************** ENDED GLOBAL STYLES ********************/
 /*************** Home Styles ***********************/
-
-
-
 /*************** Home Styles ***********************/
-
-/*************** Resume Styles ***********************/
-/*************** Resume Styles ***********************/
+/*************** Started Resume Styles ***********************/
 /* Styling for the resume section */
 .resume-section {
   background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Light gradient background */
@@ -135,16 +131,14 @@ input, textarea, select {
     opacity: 1;
   }
 }
-/*************** Resume Styles ***********************/
+/*************** Ended Resume Styles ***********************/
 
-/*************** Resume Styles ***********************/
-
-/*************** Project Styles ***********************/
+/*************** Started Project Styles ***********************/
 
 /* Container styles */
 .projects-section {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #5a189a, #f4a261); /* Gradient background with purple and orange */
+  background: #f0f4f8; /* Dominant color */
   color: #fff;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   transition: background 0.4s ease-in-out;
@@ -160,23 +154,23 @@ input, textarea, select {
 /* Header styles */
 .projects-section h1 {
   font-size: 2.8rem;
-  color: #ff9f1c; /* Bright orange for header */
+  color: #3182ce; /* Secondary color */
   margin-bottom: 1.5rem;
   font-weight: 700;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(255, 159, 28, 0.8); /* Glow effect */
+  text-shadow: 0 0 10px rgba(49, 130, 206, 0.8); /* Glow effect */
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .projects-section h1:hover {
-  color: #9d4edd; /* Purple on hover */
-  text-shadow: 0 0 15px rgba(157, 78, 221, 1); /* Stronger glow */
+  color: #ff9f1c; /* Accent color */
+  text-shadow: 0 0 15px rgba(255, 159, 28, 1); /* Stronger glow */
 }
 
 /* Paragraph styles */
 .projects-section p {
   font-size: 1.2rem;
-  color: #ececec; /* Light gray for better readability */
+  color: #4a5568; /* Medium gray for better readability */
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
@@ -203,26 +197,26 @@ input, textarea, select {
 
 .card:hover {
   transform: translateY(-10px); /* Lift effect on hover */
-  background-color: #ffba08; /* Orange background on hover */
+  background-color: #ff9f1c; /* Accent color */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 /* Title and description styles */
 .card h2 {
   font-size: 1.8rem;
-  color: #ff9f1c;
+  color: #3182ce; /* Secondary color */
   margin-bottom: 1rem;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .card h2:hover {
-  color: #9d4edd; /* Purple color on hover */
+  color: #ff9f1c; /* Accent color */
 }
 
 .card p {
   font-size: 1.1rem;
-  color: #ececec;
+  color: #4a5568; /* Medium gray */
   margin-bottom: 1.5rem;
 }
 
@@ -238,7 +232,7 @@ input, textarea, select {
 /* Technology image styles */
 .technologyImage {
   border-radius: 6px;
-  background: #ff9f1c; /* Bright orange for icons */
+  background: #3182ce; /* Secondary color */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 60px;
   height: 60px;
@@ -283,18 +277,18 @@ input, textarea, select {
 .videoWrapper {
   margin-top: 1.5rem;
   padding: 0.5rem;
-  border: 2px solid #ff9f1c;
+  border: 2px solid #3182ce; /* Secondary color */
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  color: #ff9f1c; /* Bright orange for text */
+  color: #3182ce; /* Secondary color */
   font-weight: 600;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .videoWrapper:hover {
-  background: #9d4edd; /* Purple background on hover */
-  color: #ffea00; /* Yellow text on hover */
+  background: #ff9f1c; /* Accent color */
+  color: #fff; /* White text on hover */
 }
 
 /* Video Overlay styles */
@@ -320,7 +314,6 @@ input, textarea, select {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 /*************** End of Project Styles ***********************/
-
 /******************** STARTED INTERNSHIPS PAGE STYLES ********************/
 /* Internships Section */
 
@@ -411,8 +404,7 @@ input, textarea, select {
   color: #0284c7; /* Darker blue on hover */
   text-decoration: underline;
 }
-
-/*****************Internship Ended****************/
+/*****************Ended Internship Styles****************/
 /***************** Contact Form *********/
 
 /* Section */
