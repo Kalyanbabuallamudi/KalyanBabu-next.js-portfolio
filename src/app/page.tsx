@@ -12,7 +12,6 @@ import Resume from './components/Resume';
 import Navbar from './Navbar';
 import MusicPlayer from './components/MusicPlayer';
 
-
 const Footer = () => (
   <footer className="footer">
     <p className="footer-heading">© 2025 Kalyan Babu made with ❤️</p>

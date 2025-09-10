@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 import '../../styles/globals.css';
 import { texts, aboutMeSentences } from '@/data/scripts';
 
+
 const HomeSection = () => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
