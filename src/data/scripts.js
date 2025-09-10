@@ -151,6 +151,12 @@ export const skills = [
 
 /*********************** CERTIFICATIONS ******************/
 export const certifications = [
+   {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "AWS",
+    image: "/awscert.jpg",
+    link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/3f89ced3e6004e529d4371ca39f0ff00"
+  },
   {
     title: "Salesforce Certified AI Associate",
     issuer: "Salesforce",
