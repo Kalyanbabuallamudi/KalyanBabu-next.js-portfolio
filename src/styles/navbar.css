@@ -4,22 +4,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 3.5rem; /* Increased height for better spacing */
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem; /* Horizontal padding for a balanced layout */
-  z-index: 1000; /* Keep it on top */
-  backdrop-filter: blur(10px); /* Add a glassmorphism effect */
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition on scroll */
+  padding: 0 2rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: #2563eb; /* Deep blue background */
+  color: #fff; /* White text */
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15); /* Blue shadow for depth */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 /* Change background on scroll */
 .navbar-container.scrolled {
-  background-color: rgba(255, 255, 255, 0.8); /* More opaque background */
-  backdrop-filter: blur(20px); /* Stronger blur effect */
+  background-color: #1e293b; /* Darker blue when scrolled */
+  color: #fff;
+  backdrop-filter: blur(20px);
 }
 
 /* Styling for the hamburger button */

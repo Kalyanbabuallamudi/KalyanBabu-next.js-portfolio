@@ -20,11 +20,11 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           Hi, I'm <span className="text-blue-600 font-semibold">Kalyan Babu</span>!
-          I'm a web developer specializing in <span className="text-blue-600 font-semibold">Next.js</span> and <span className="text-blue-600 font-semibold">React</span>, dedicated to crafting engaging and user-friendly web applications. My passion lies in delivering high-quality, innovative solutions that make a difference.
+          I'm an M.Tech Computer Science graduate (CGPA 9.2) actively pursuing PhD opportunities in CSE with a focus on <span className="text-blue-600 font-semibold">AI/ML</span>. I aim to contribute to rigorous research and academic innovation while building practical, scalable intelligent systems.
           <br /><br />
-          I love exploring new technologies, contributing to open-source projects, and staying ahead of the curve in web development. I'm always eager to learn, grow, and collaborate on exciting projects.
+          My work includes an AI-powered Hospital Automation System (JISEM, 2025) using Python, TensorFlow, REST APIs, and databases, and a Pathfinding Visualizer with BFS, A*, and Dijkstra. I also completed AI/ML and software development internships, deploying TensorFlow models on cloud platforms and optimizing real-time systems.
           <br /><br />
-          Let's connect and create something amazing together!
+          I'm excited to collaborate with research labs, publish impactful work, and advance applied ML and NLP solutions.
         </motion.p>
       </div>
     </section>

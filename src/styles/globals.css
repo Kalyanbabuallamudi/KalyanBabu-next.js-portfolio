@@ -1,54 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import "./navbar.css";
+@import "tailwindcss";
 
 /******************** STARTED GLOBAL STYLES ********************/
 
-/* Apply new impressive background globally */
-body {
-  @apply font-sans text-gray-800 min-h-screen flex flex-col;
 
-  background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Light gradient background */
-  background-size: cover; /* Ensure the background covers the entire screen */
+
+body {
+  @apply font-sans text-slate-800 min-h-screen flex flex-col;
+  background: #f8fafc;
   margin: 0;
   padding: 0;
-  overflow: auto; /* Allow scrolling */
-  min-height: 100vh; /* Ensure the body takes at least full viewport height */
+  overflow: auto;
+  min-height: 100vh;
 }
 
-/* Ensure the main content stretches and the footer stays at the bottom */
+
 main {
   @apply flex-grow;
-  padding: 5px 0; /* Adjust padding as needed */
-  width: 100%; /* Ensure the main content takes full width */
+  padding: 16px 0;
+  width: 100%;
+  background: #f8fafc;
 }
 
-/* Link and Container Styles */
+
 a {
-  @apply text-indigo-600 hover:text-indigo-800;
+  @apply text-blue-600 hover:text-indigo-500 transition-colors;
 }
 
-/* Section, Heading, and Button Styles */
+
 section {
   @apply py-10;
+  background: transparent;
 }
+
 
 h1, h2, h3 {
-  @apply font-bold text-gray-900;
+  @apply font-bold text-slate-900;
 }
 
+
 button {
-  @apply bg-indigo-600 text-white py-2 px-5 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500;
-  display: block; /* Ensure the button is a block element */
-  margin: 0 auto; /* Center the button */
+  @apply bg-blue-600 text-white py-2 px-5 rounded-lg shadow-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-blue-600;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Form and Card Styles */
+
 input, textarea, select {
-  @apply border border-gray-300 rounded-lg p-2 focus:ring-indigo-500 focus:border-indigo-500;
+  @apply border border-slate-300 rounded-lg p-2 focus:ring-blue-600 focus:border-blue-600;
 }
+
 
 .card {
   @apply bg-white shadow-lg rounded-lg p-6 mb-16;
@@ -930,16 +933,17 @@ p a:hover {
 
 .footer {
   display: flex;
-  align-items: center; /* Centers items vertically */
-  justify-content: center; /* Centers items horizontally */
-  padding: auto;
-  width:auto;
-  background-color: #f49e0a;
-  color: #17ed0f;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: #f1f5f9; /* Figma gray 100 */
+  color: #334155; /* Figma slate 700 */
 }
 
 .footer-heading {
-  margin: 0; /* Removes default margin */
+  margin: 0;
+  font-weight: 500;
 }
 
 /**************** Footer *******************************/

@@ -1,0 +1,12 @@
+html, body {
+	background-color: theme('colors.background');
+	color: theme('colors.neutral');
+	font-family: 'Inter', 'sans-serif';
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	background: theme('colors.background');
+}

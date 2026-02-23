@@ -14,7 +14,7 @@ import MusicPlayer from './components/MusicPlayer';
 
 const Footer = () => (
   <footer className="footer">
-    <p className="footer-heading">© 2025 Kalyan Babu made with ❤️</p>
+    <p className="footer-heading">© 2026 Kalyan Babu Allamudi made with ❤️</p>
   </footer>
 );
 
@@ -25,7 +25,7 @@ export default function Page() {
       <Navbar />
       <Home />
       <Resume />
-      <Projects />
+      <Projects id="projects" />
       <Internships />
       <Certifications />
       <Skills />

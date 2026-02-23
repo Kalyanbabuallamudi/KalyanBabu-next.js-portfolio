@@ -32,64 +32,45 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className }) => {
   );
 };
 
-const Projects = () => {
+interface ProjectsProps {
+  id?: string;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ id }) => {
   const [activeProjectIndex, setActiveProjectIndex] = useState<number | null>(null);
 
   const handleVideoClick = (index: number) => {
     setActiveProjectIndex(index);
   };
 
-  const handleCloseVideo = () => {
-    setActiveProjectIndex(null);
-  };
-
   return (
-    <section id="projects" className="projects-section">
-      <div className="container">
-        <h1>Projects</h1>
-        <p>Discover some of my projects and the technologies I've used.</p>
-        <div className="grid">
+    <section id={id} className="bg-background py-12">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-heading text-center text-primary mb-8">
+          Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <AnimatedCard key={index} className={project.className}>
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <div className="technologies">
-                {project.technologies.map((tech, idx) => (
-                  <Image
-                    key={idx}
-                    src={tech}
-                    alt="Technology"
-                    width={60}
-                    height={60}
-                    className="technologyImage"
-                  />
-                ))}
-              </div>
-              <div className="githubLink">
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/github.png" // Replace with your GitHub icon path
-                    alt="GitHub"
-                    width={30}
-                    height={30}
-                  />
-                </a>
-              </div>
-              <div className="videoWrapper" onClick={() => handleVideoClick(index)}>
-                <p>Watch Video</p>
-              </div>
-              {activeProjectIndex === index && (
-                <div className="videoOverlay" onClick={handleCloseVideo}>
-                  <video controls className="videoPlayer" onClick={(e) => e.stopPropagation()}>
-                    <source src={project.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+            <AnimatedCard key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+              <div className="relative">
+                <Image
+                  src={project.technologies[0]}
+                  alt={project.title}
+                  width={400}
+                  height={200}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-bold text-neutral mb-2">{project.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{project.description}</p>
+                  <button
+                    onClick={() => handleVideoClick(index)}
+                    className="bg-primary text-white px-4 py-2 rounded hover:bg-secondary transition-colors duration-300"
+                  >
+                    View Demo
+                  </button>
                 </div>
-              )}
+              </div>
             </AnimatedCard>
           ))}
         </div>

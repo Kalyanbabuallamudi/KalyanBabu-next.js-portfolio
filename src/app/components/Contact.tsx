@@ -1,96 +1,23 @@
 'use client'; // Ensure this file is treated as a client component in Next.js
 
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com'; // Import emailjs
-import '../../styles/globals.css';
+import React from 'react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [isSent, setIsSent] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      )
-      .then(
-        () => {
-          setIsSent(true);
-        },
-        (error) => {
-          console.error('Failed to send the message:', error);
-          setError('Failed to send message. Please try again later.');
-        }
-      );
-  };
+  const email = 'allamudikalyanbabu56@gmail.com';
+  const subject = 'Professional Inquiry';
+  const body = "Hello Kalyan,\n\nI came across your portfolio and would like to connect regarding professional opportunities.\n\nBest regards,\n[Your Name]";
 
   return (
-    <section id="contact">
-      <h1>Email Me</h1>
-      <div className="contact-container">
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              value={formData.message}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-          <button type="submit" className="submit-button">
-            Send Message
-          </button>
-        </form>
-        {isSent && <p>Message sent successfully!</p>}
-        {error && <p>{error}</p>}
+    <section id="contact" className="bg-background py-12">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">Contact Me</h2>
+        <p className="text-lg text-neutral mb-4">Feel free to reach out for professional opportunities or collaborations.</p>
+        <a
+          className="bg-primary text-white px-6 py-3 rounded hover:bg-secondary transition-colors duration-300"
+          href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+        >
+          📧 Email Me
+        </a>
       </div>
     </section>
   );

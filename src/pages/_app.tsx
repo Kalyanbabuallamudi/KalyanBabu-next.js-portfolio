@@ -1,7 +1,7 @@
 // pages/_app.tsx
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
-import '../src/styles/globals.css';
+import '../styles/globals.css';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';

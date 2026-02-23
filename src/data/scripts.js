@@ -3,17 +3,17 @@
 
 export const texts = [
   'Welcome to my portfolio!',
-  'Hello, I\'m Kalyan Babu', 
-  'A Fullstack Developer',
-  'An AI Enthusiast',
+  'Hello, I\'m Kalyan Babu Allamudi', 
+  'Java Full Stack Developer',
+  'Building Scalable and Robust Applications',
 ];
 
 export const aboutMeSentences = [
-  "I create engaging and user-friendly web apps.",
-  "I’m passionate about delivering innovative solutions.",
-  "I enjoy exploring new technologies and contributing to open-source.",
-  "I'm eager to learn, grow, and collaborate.",
-  "Let's connect and create something amazing!",
+  "I am a Java Full Stack Software Engineer with expertise in building scalable and robust applications.",
+  "I specialize in developing end-to-end solutions using Java, Spring Boot, React, and cloud technologies.",
+  "My interests include microservices architecture, RESTful APIs, and cloud-based deployment pipelines.",
+  "I enjoy collaborating on impactful software projects and delivering high-quality solutions.",
+  "Let's connect and discuss software engineering opportunities!",
 ];
 
 /*******************Home Page *******************/

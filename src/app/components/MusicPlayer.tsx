@@ -14,14 +14,7 @@ const MusicPlayer = () => {
       audioInstance.volume = 0.9; // Set initial volume
       setAudio(audioInstance);
 
-      // Auto-play on component mount
-      audioInstance
-        .play()
-        .then(() => setIsPlaying(true))
-        .catch((error) => {
-          console.error("Error playing audio: ", error);
-          setIsPlaying(false);
-        });
+      setIsPlaying(false);
 
       // Cleanup on unmount
       return () => {
